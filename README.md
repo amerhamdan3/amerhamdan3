@@ -1,161 +1,222 @@
-# Amer Hamdan - Personal Portfolio 🚀
+# Hi there, I'm Amer Hamdan! 👋
 
-A modern, animated, and friendly portfolio website built with Next.js, TypeScript, and Tailwind CSS.
+<div align="center">
+  
+### Full Stack Developer 🚀 | Laravel Expert 💜 | Next.js Enthusiast ⚡
 
-## ✨ Features
+*I turn coffee ☕ into code, ideas into reality, and bugs into features*  
+*(just kidding about the bugs... mostly)*
 
-- 🎨 Modern and beautiful UI with smooth animations
-- 📱 Fully responsive design
-- ⚡ Fast and optimized with Next.js 14
-- 🎭 Framer Motion animations
-- 🌙 Dark theme with gradient accents
-- 🚀 Easy to deploy to GitHub Pages
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amerhamdan3/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amerhamdan3)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amer.m.hamdan@gmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/905533271100)
 
-## 🛠️ Tech Stack
-
-- **Framework**: Next.js 14
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **Deployment**: GitHub Pages
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 18+ installed
-- npm or yarn package manager
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/amerhamdan3.git
-cd amerhamdan3
-```
-
-2. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-```
-
-3. Run the development server:
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## 📝 Customization
-
-### Update Contact Information
-
-Edit `components/Contact.tsx` and update your contact details:
-
-```typescript
-const contactMethods = [
-  {
-    icon: '📧',
-    label: 'Email',
-    value: 'amer.m.hamdan@gmail.com',  // Update this
-    href: 'mailto:amer.m.hamdan@gmail.com',  // Update this
-    // ...
-  },
-  // Update other contact methods...
-]
-```
-
-### Modify Content
-
-- **Hero Section**: Edit `components/Hero.tsx`
-- **About Section**: Edit `components/About.tsx`
-- **Experience**: Edit `components/Experience.tsx`
-- **Skills**: Edit `components/Skills.tsx`
-- **Projects**: Edit `components/Projects.tsx`
-- **Contact**: Edit `components/Contact.tsx`
-
-### Change Colors
-
-Edit `tailwind.config.js` to customize the color scheme:
-
-```javascript
-colors: {
-  primary: '#3b82f6',    // Change primary color
-  secondary: '#8b5cf6',  // Change secondary color
-  dark: '#0f172a',       // Change background
-  light: '#f8fafc',      // Change text color
-}
-```
-
-## 📦 Deployment to GitHub Pages
-
-1. Update the `basePath` in `next.config.js`:
-```javascript
-basePath: process.env.NODE_ENV === 'production' ? '/your-repo-name' : '',
-```
-
-2. Build and export:
-```bash
-npm run build
-```
-
-3. The static files will be in the `out` directory
-
-4. Push to GitHub and enable GitHub Pages:
-   - Go to your repository settings
-   - Navigate to "Pages"
-   - Select the branch with your `out` folder
-   - Your site will be live at `https://yourusername.github.io/your-repo-name`
-
-### Automated Deployment with GitHub Actions
-
-Create `.github/workflows/deploy.yml`:
-
-```yaml
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      - run: npm install
-      - run: npm run build
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-```
-
-## 🎨 Features to Customize
-
-- Add your own projects and experiences
-- Update social media links
-- Add or remove skills
-- Change color schemes
-- Add new sections
-- Customize animations
-
-## 📄 License
-
-This project is open source and available for personal use.
-
-## 🐱 Fun Fact
-
-This portfolio was built with love, coffee ☕, and occasional keyboard assistance from a very opinionated cat who insists on cold tap water 🐱💧
+</div>
 
 ---
 
-Made with ❤️ by Amer Hamdan
+## 🧑‍💻 About Me
 
+I'm a **Full Stack Web Developer** with a passion for building scalable, fast, and modern web applications. I love turning ideas into functional, high-performance digital experiences that people actually enjoy using! 🎯
+
+My tech stack is pretty diverse – I work extensively with **Node.js**, **Express**, **TypeScript**, **PHP**, and **Next.js**. My work usually combines backend logic with frontend precision, creating products that are both efficient and delightful to use. ✨
+
+I'm an **expert in PHP and Laravel** 💜, having created and managed many large-scale projects over the years. I focus on writing clean, maintainable code and building systems that balance performance, security, and flexibility. Laravel remains one of my strongest frameworks – I've used it to power everything from advanced APIs to complete business platforms with admin dashboards and content systems.
+
+I've also had the chance to experiment with **AI-driven systems** 🤖, adding intelligent features to improve automation and user interaction. The intersection of traditional development and AI is fascinating!
+
+> 🐱 When I'm not coding, I'm usually spending time with my cat – who has very specific requirements about her water (it must be cold and from the faucet, obviously). She's also my unofficial code reviewer, though her feedback is mostly "meow" and occasional keyboard walks. 😸
+
+---
+
+## 🛠️ Tech Stack & Skills
+
+### ⚙️ Backend Mastery
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+
+- 🐘 **PHP & Laravel** - Expert (💜 My favorite!)
+- 🟢 **Node.js & Express** - Advanced
+- 📘 **TypeScript** - Advanced
+- 🔌 **RESTful APIs** - Expert
+- 🗄️ **Database Design** - Advanced (MySQL, PostgreSQL, Redis)
+
+### ✨ Frontend Magic
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+
+- ⚛️ **Next.js & React** - Advanced
+- 📘 **TypeScript** - Advanced
+- 🎨 **Tailwind CSS** - Advanced
+- 📱 **Responsive Design** - Expert
+- 🎭 **Modern UI/UX** - Advanced
+
+### 🛠️ DevOps & Tools
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+- 🔀 **Git & GitHub** - Advanced
+- 🐳 **Docker** - Intermediate
+- 🐧 **Linux/Unix** - Advanced
+- 🔄 **CI/CD** - Intermediate
+- ⚡ **Performance Optimization** - Advanced
+
+### 🦸 Special Powers
+- 📈 **SEO Strategy** - Expert
+- 🤖 **AI Integration** - Intermediate
+- 👥 **Team Leadership** - Advanced
+- 🏗️ **System Architecture** - Advanced
+- ☕ **Coffee Consumption** - Master
+
+---
+
+## 💼 Professional Experience
+
+### 🚀 Work with ID8 Media
+**Recent Years**
+
+Built and launched multiple projects across different industries, combining modern tech stacks with creative solutions.
+
+- Multiple successful project launches
+- Cross-industry experience
+- Full-stack development with AI integration
+- Modern tech implementations
+
+### 📰 Head of Developers Team & SEO @ Orient News
+**2021 - 2023 | Turkey 🇹🇷**
+
+Led the complete digital transformation of one of the region's largest news agencies.
+
+- ✅ Migrated from native PHP to modern Laravel architecture
+- ✅ Built and led a development team from scratch
+- ✅ Transitioned to Next.js (React + Node.js) for improved performance
+- ✅ Managed complete SEO strategy - significantly increased organic traffic
+- ✅ Restructured content architecture and optimized Core Web Vitals
+
+### 🤝 International Collaborations
+**Current | U.S. & MENA Regions 🌍**
+
+Working with clients across different regions on impactful projects.
+
+- multifaithalliance.org and other meaningful projects
+- Cross-cultural collaboration
+- Modern tech implementations
+
+---
+
+## 🎨 Featured Projects
+
+### 📰 Orient News Platform
+Complete digital transformation of a major news agency. Migrated from legacy PHP to modern Laravel, then enhanced with Next.js frontend.
+
+**Impact**: Significant increase in organic traffic and site performance
+
+**Tech Stack**: Laravel • Next.js • React • Node.js • SEO
+
+**Highlights**:
+- Led team of developers
+- Complete architecture redesign
+- Advanced SEO implementation
+- Core Web Vitals optimization
+
+### 🚀 ID8 Media Projects
+Multiple successful projects across various industries, each with unique challenges and modern tech solutions.
+
+**Impact**: Diverse portfolio of launched applications
+
+**Tech Stack**: Node.js • TypeScript • Express • Next.js • AI Integration
+
+**Highlights**:
+- Cross-industry experience
+- AI-driven features
+- Scalable architectures
+- Modern tech stacks
+
+### 🤝 Multi Faith Alliance
+Collaborative project promoting interfaith dialogue and understanding through modern web technologies.
+
+**Impact**: Connecting communities across different faiths
+
+**Tech Stack**: Next.js • TypeScript • Modern UI/UX
+
+**Highlights**:
+- International collaboration
+- U.S. & MENA regions
+- Community-focused design
+- Accessible interface
+
+### 💼 Enterprise Laravel Systems
+Multiple large-scale Laravel applications including APIs, admin dashboards, and complete business platforms.
+
+**Impact**: Powering business operations with robust solutions
+
+**Tech Stack**: Laravel • PHP • MySQL • Redis • APIs
+
+**Highlights**:
+- Clean, maintainable code
+- Advanced API development
+- Admin dashboards
+- Content management systems
+
+---
+
+## 📊 GitHub Stats
+
+<div align="center">
+  
+![Amer's GitHub stats](https://github-readme-stats.vercel.app/api?username=amerhamdan3&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=amerhamdan3&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117)
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=amerhamdan3&theme=tokyonight&hide_border=true&background=0D1117)
+
+</div>
+
+---
+
+## 🤝 Let's Connect!
+
+Got a project in mind? Want to collaborate? Or just want to say hi?  
+I'm always excited to hear about new opportunities and ideas!
+
+- 📧 **Email**: [amer.m.hamdan@gmail.com](mailto:amer.m.hamdan@gmail.com)
+- 💼 **LinkedIn**: [Connect with me](https://www.linkedin.com/in/amerhamdan3/)
+- 💻 **GitHub**: [@amerhamdan3](https://github.com/amerhamdan3)
+- 💬 **WhatsApp**: [+905533271100](https://wa.me/905533271100)
+
+### ☕ Coffee Chat?
+
+I'm always up for a good conversation about tech, projects, or anything interesting. Whether you're looking to build something amazing or just want to discuss the latest in web development and AI, feel free to reach out!
+
+🌍 Remote-friendly • ⏰ Flexible hours • 🚀 Fast responder
+
+---
+
+## 💡 Current Focus
+
+🎯 **Currently**: Exploring AI integrations, improving UX/performance, and always learning new technologies!
+
+💭 **Philosophy**: Always learning, always growing. The tech world never sleeps, and neither does my curiosity!
+
+---
+
+<div align="center">
+
+### 🐱 Fun Fact
+
+*P.S. - If my response is delayed, it's probably because my cat is sitting on my keyboard 🐱⌨️*
+
+---
+
+**Made with ❤️, coffee ☕, and occasional keyboard assistance from a very opinionated cat**
+
+![Profile Views](https://komarev.com/ghpvc/?username=amerhamdan3&color=blueviolet&style=for-the-badge)
+
+</div>
