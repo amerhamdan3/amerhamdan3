@@ -61,8 +61,8 @@ const contactMethods = [
   {
     icon: '📧',
     label: 'Email',
-    value: 'your.email@example.com',  // Update this
-    href: 'mailto:your.email@example.com',  // Update this
+    value: 'amer.m.hamdan@gmail.com',  // Update this
+    href: 'mailto:amer.m.hamdan@gmail.com',  // Update this
     // ...
   },
   // Update other contact methods...

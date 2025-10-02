@@ -38,63 +38,87 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-6xl mx-auto"
         >
+          {/* Profile Image */}
           <motion.div
-            className="text-6xl mb-4 inline-block"
-            animate={{ rotate: [0, 20, -20, 0] }}
-            transition={{ duration: 2.5, repeat: Infinity }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative"
           >
-            👋
-          </motion.div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Hi, I'm <span className="gradient-text">Amer Hamdan</span>
-          </h1>
-          
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8"
-          >
-            Full Stack Developer 🚀 | Laravel Expert 💜 | Next.js Enthusiast ⚡
-          </motion.p>
-          
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-lg text-gray-400 max-w-2xl mx-auto mb-12"
-          >
-            I turn coffee ☕ into code, ideas into reality, and bugs into features
-            <br />
-            <span className="text-sm">(just kidding about the bugs... mostly)</span>
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="flex gap-4 justify-center"
-          >
-            <motion.a
-              href="#contact"
-              className="px-8 py-3 bg-gradient-to-r from-primary to-secondary rounded-full font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className="relative"
             >
-              Let's Talk 💬
-            </motion.a>
-            <motion.a
-              href="#projects"
-              className="px-8 py-3 border-2 border-primary rounded-full font-semibold hover:bg-primary/10 transition-all"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              View My Work 👀
-            </motion.a>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl blur-2xl opacity-50"></div>
+              <img
+                src="/profile.png"
+                alt="Amer Hamdan"
+                className="relative  h-64 md:h-80 object-cover rounded-3xl border-4 border-primary/50 shadow-2xl hover:border-primary transition-all duration-300"
+              />
+            </motion.div>
           </motion.div>
+
+          {/* Text Content */}
+          <div className="text-center md:text-left flex-1">
+            <motion.div
+              className="text-6xl mb-4 inline-block"
+              animate={{ rotate: [0, 20, -20, 0] }}
+              transition={{ duration: 2.5, repeat: Infinity }}
+            >
+              👋
+            </motion.div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              Hi, I'm <span className="gradient-text">Amer Hamdan</span>
+            </h1>
+          
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="text-xl md:text-2xl text-gray-300 mb-8"
+            >
+              Full Stack Developer 🚀 | Laravel Expert 💜 | Next.js Enthusiast ⚡
+            </motion.p>
+            
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="text-lg text-gray-400 mb-12"
+            >
+              I turn coffee ☕ into code, ideas into reality, and bugs into features
+              <br />
+              <span className="text-sm">(just kidding about the bugs... mostly)</span>
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className="flex gap-4 justify-center md:justify-start"
+            >
+              <motion.a
+                href="#contact"
+                className="px-8 py-3 bg-gradient-to-r from-primary to-secondary rounded-full font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Let's Talk 💬
+              </motion.a>
+              <motion.a
+                href="#projects"
+                className="px-8 py-3 border-2 border-primary rounded-full font-semibold hover:bg-primary/10 transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View My Work 👀
+              </motion.a>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
 
