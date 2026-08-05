@@ -99,9 +99,9 @@ bluHub (ID8 Media, 2024 — 2025) — Five surfaces on one content backend
 Multi-surface platform for an organisation: public site, a Strapi-backed CMS its staff run themselves, an admin panel, a REST API, and a separate jobs portal.
 Stack: Next.js, TypeScript, Strapi, Node.js, CMS
 
-Louna (Independent, 2026 — Present) — Storefront plus social publishing
-E-commerce platform with a connected social layer — role-based page access for the team and an encrypted Meta connection driving Facebook and Instagram publishing.
-Stack: Next.js, TypeScript, Meta API, PM2, GA4
+Cuties Baby Store (Independent, 2026 — Present) — Live storefront plus social publishing
+Arabic-first online store for baby and infant products, serving Damascus and the wider Syrian market, with a connected social layer that publishes straight to Facebook and Instagram.
+Stack: Next.js, TypeScript, Meta API, PM2, GA4, RTL
 
 Marasid (ID8 Media, 2024 — 2025) — Two languages, two editorial workflows
 Bilingual Arabic and English publication platform: a Next.js front end over Strapi, with a separate CMS instance per language so each editorial team works independently.

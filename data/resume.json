@@ -424,16 +424,17 @@
       ]
     },
     {
-      "id": "louna",
-      "name": "Louna",
+      "id": "cuties",
+      "name": "Cuties Baby Store",
       "org": "Independent",
       "period": "2026 — Present",
-      "description": "E-commerce platform with a connected social layer — role-based page access for the team and an encrypted Meta connection driving Facebook and Instagram publishing.",
-      "outcome": "Storefront plus social publishing",
+      "url": "https://cutiesbabystore.com/",
+      "description": "Arabic-first online store for baby and infant products, serving Damascus and the wider Syrian market, with a connected social layer that publishes straight to Facebook and Instagram.",
+      "outcome": "Live storefront plus social publishing",
       "highlights": [
         "Encrypted Meta (Facebook/Instagram) connection with credentials stored outside the release directory",
         "Role-based page access, cached per worker under PM2 cluster mode",
-        "GA4 and Tag Manager event tracking on a documented naming convention",
+        "GA4 and Tag Manager e-commerce tracking on a documented event convention",
         "Deploy layout that survives directory-replacing releases without losing state"
       ],
       "keywords": [
@@ -441,7 +442,8 @@
         "TypeScript",
         "Meta API",
         "PM2",
-        "GA4"
+        "GA4",
+        "RTL"
       ]
     },
     {
