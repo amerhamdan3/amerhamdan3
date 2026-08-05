@@ -1,0 +1,101 @@
+AMER HAMDAN
+Senior Full-Stack Engineer · Tech Lead · AI-Product Development
+amer.m.hamdan@gmail.com | +90 553 327 11 00 | Istanbul, Türkiye | https://amerhamdan.com | github.com/amerhamdan3 | linkedin.com/in/amerhamdan3
+
+SUMMARY
+=======
+Senior full-stack engineer and team lead with ten years building and rebuilding production web platforms across news, recruitment, healthcare research, and SaaS. Leads small teams through legacy migrations — PHP to Laravel, WordPress to Next.js — and ships the result with measurable gains in performance, engagement, and delivery rate. Comfortable owning the whole path: data model, API, interface, cloud deployment, and the SEO and Core Web Vitals work that decides whether anyone finds the product at all.
+
+EXPERIENCE
+==========
+
+Senior Full-Stack Developer / Team Lead
+ID8 Media | Istanbul, Türkiye | 2023 — Present
+- Raised project success rate 25% by leading development teams through 5 complex, concurrent client builds.
+- Improved software efficiency 15% for news agencies by engineering tailored publishing and content-delivery solutions.
+- Built large-scale global hiring platforms handling multi-region job data and employer workflows.
+- Own the delivery pipeline for multi-client sites: architecture, code review, deployment, and post-launch performance.
+
+Web Lead & Site Administrator
+Multifaith Alliance | New York, United States (remote) | 2021 — Present
+- Improved site performance 70% by rebuilding the entire site with Next.js and Tailwind CSS.
+- Migrated a legacy WordPress installation to a fully custom modern stack with no loss of content or search ranking.
+- Built dynamic page types and a reusable component system the non-profit's staff can extend without a developer.
+- Reworked SEO structure, page-load speed, responsive behaviour, and production deployment.
+
+Founder & CEO
+Amenu (SaaS) | Global | 2020 — Present
+- Grew to 1,000+ active users, demonstrating real market adoption without a sales team.
+- Shipped three major versions, each iterating on features, onboarding, and performance from live usage data.
+- Built and run the full stack independently — product, front end, back end, billing, infrastructure, and support.
+
+Head of Developers Team
+Orient News | Dubai, United Arab Emirates | 2021 — 2023
+- Increased user engagement 30% by leading the development of a new website for a major news agency.
+- Boosted platform performance 30% by migrating the newsroom from native PHP to Laravel.
+- Built and led the development team from scratch, setting review standards and release process.
+- Owned the SEO strategy and content architecture, growing organic traffic and improving Core Web Vitals.
+
+Head of Developers
+Alpha Creative Agency | Istanbul, Türkiye | 2016 — 2021
+- Delivered 21+ production websites across client industries.
+- Led the programming team day to day, from scoping through delivery and handover.
+- Designed and implemented admin panels and front-end interfaces for clients with no in-house technical staff.
+
+SEO & Technical Consultant
+Freelance | Global | 2020 — Present
+- Delivered comprehensive site status analyses for 100 clients, translating audits into ranked action lists.
+- Improved client execution efficiency 15% by replacing vague audit reports with prioritised, detailed to-do lists.
+- Ongoing technical and on-page SEO work: crawlability, structure, speed, and search visibility.
+
+Senior Consultant
+Inhouse Global | Istanbul, Türkiye | 2020 — 2021
+- Increased user engagement 30% by developing a fully functional website from scratch.
+- Managed network infrastructure and server requirements alongside the application itself.
+- Maintained the site, resolved production issues, and trained internal users on the system.
+
+Full-Stack Web Developer
+Job2Go Recruitment Agency | Wales, United Kingdom | 2019 — 2020
+- Reduced downtime 30% by defining the site roadmap and establishing robust server infrastructure.
+- Increased production efficiency 15% by introducing the tooling and systems the team was missing.
+- Contributed to hiring and onboarding new team members as the company scaled.
+
+Full-Stack Web Developer
+Questionnaire Connect | United States (remote) | 2018 — 2019
+- Increased survey response rate 35% by developing a purpose-built web application for Questionnaire Connect®.
+- Cut roughly $20,000 from feedback-collection costs by distributing 5,000 surveys online instead of on paper.
+- Improved how providers collect, store, and analyse patient treatment feedback.
+
+SELECTED PROJECTS
+=================
+
+Orient News Platform (Orient News, 2021 — 2023) — +30% engagement · +30% platform performance
+Full digital transformation of a regional news agency: legacy native PHP rebuilt on Laravel, then a Next.js front end on top for speed and search.
+Stack: Laravel, PHP, Next.js, React, SEO
+
+Multifaith Alliance (Multifaith Alliance, 2021 — Present) — +70% site performance
+Complete rebuild of a US non-profit's public platform, moving from WordPress to a custom Next.js and Tailwind stack with a reusable component system.
+Stack: Next.js, Tailwind CSS, TypeScript, Migration, SEO
+
+Amenu (Independent, 2020 — Present) — 1,000+ active users
+Menu-management SaaS for restaurants. Built solo end to end and iterated across three major versions based on how real venues actually used it.
+Stack: SaaS, Node.js, Product, Multi-tenant
+
+Global Hiring Platforms (ID8 Media, 2023 — Present) — +25% project success rate across 5 builds
+Large-scale recruitment platforms handling multi-region job data, employer workflows, and candidate matching, delivered alongside multi-client site operations.
+Stack: Next.js, TypeScript, Node.js, Google Cloud Run, Docker
+
+SKILLS
+======
+Backend: Node.js, Express.js, Laravel (PHP), Strapi, RESTful API design, Authentication, Role & permission systems, Caching
+Frontend: TypeScript, JavaScript, React, Next.js, Tailwind CSS, HTML5, CSS3, Responsive design, UI/UX, shadcn/ui, Material UI, REST API integration
+Data: MySQL, PostgreSQL, MongoDB, Prisma ORM, Schema design
+Cloud & DevOps: Google Cloud Run, Google Cloud Build, Docker, Linux server management, Nginx, CI/CD pipelines, Git, GitHub
+AI Integration: LLM API integration, AI-assisted product features, Workflow automation, AI-assisted development tooling
+Practice: Technical & on-page SEO, Core Web Vitals, Team leadership, Agile / Scrum, Accessible layouts, Jira, Trello, Slack
+
+LANGUAGES
+=========
+Arabic: Native
+English: Professional working proficiency
+Turkish: Advanced

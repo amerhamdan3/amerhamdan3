@@ -3,18 +3,114 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+    scroll-padding-top: 5rem;
+  }
+
   body {
-    @apply bg-dark text-light;
+    @apply bg-paper font-body text-ink antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  ::selection {
+    @apply bg-signal/15 text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-signal ring-offset-2 ring-offset-paper;
   }
 }
 
-@layer utilities {
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text;
+@layer components {
+  /* Small uppercase monospace label. The page's main structural device: it marks
+     every section, field name, date, and metric so the eye can skip between them. */
+  .label {
+    @apply font-mono text-label uppercase text-slate;
   }
-  
-  .card-hover {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20;
+
+  /* Engineering-paper grid. Deliberately near-invisible — it should read as a
+     surface, not as a pattern. */
+  .grid-paper {
+    background-image: linear-gradient(to right, rgba(18, 25, 31, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(18, 25, 31, 0.045) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .grid-paper-fade {
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%);
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded border px-5 py-3 font-mono text-label
+           uppercase transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply border-signal bg-signal text-paper hover:bg-ink hover:border-ink;
+  }
+
+  .btn-ghost {
+    @apply border-rule bg-transparent text-ink hover:border-ink hover:bg-ink hover:text-paper;
+  }
+
+  .chip {
+    @apply inline-block rounded border border-rule bg-paper px-2 py-1 font-mono text-[0.6875rem] leading-none
+           tracking-wide text-slate;
   }
 }
 
+/* Motion, without shipping a byte of JavaScript for it.
+   The load-in runs once; the scroll reveals use a view() timeline. Both are
+   wrapped so that a browser without support simply renders the finished state —
+   nothing is ever hidden behind a script that might not run. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  }
+
+  @supports (animation-timeline: view()) {
+    /* Entry-based range on purpose: it completes as soon as the element is
+       properly in view, so anything near the end of the document — which can
+       never scroll far enough to satisfy a cover-based range — still finishes. */
+    .reveal {
+      animation: rise linear both;
+      animation-timeline: view();
+      animation-range: entry 8% entry 55%;
+    }
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.75em;
+    color: #5b6770;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

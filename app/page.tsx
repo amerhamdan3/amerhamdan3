@@ -1,36 +1,36 @@
-'use client'
-
-import { motion } from 'framer-motion'
+import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
-import About from '@/components/About'
-import Experience from '@/components/Experience'
-import Skills from '@/components/Skills'
+import Metrics from '@/components/Metrics'
+import Work from '@/components/Work'
 import Projects from '@/components/Projects'
+import Stack from '@/components/Stack'
 import Contact from '@/components/Contact'
-import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
+import { basics } from '@/lib/resume'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Contact />
-      
-      {/* Footer */}
-      <footer className="py-5 text-center border-t border-gray-800">
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          className="text-gray-400"
-        >
-          Made with ❤️ and 🫖 by Amer Hamdan {new Date().getFullYear()}
-        </motion.p>
-      </footer>
-    </main>
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <Metrics />
+
+        <section aria-label="Profile" className="mx-auto max-w-shell px-6 py-20 md:py-24">
+          <div className="reveal grid gap-6 md:grid-cols-[10rem_minmax(0,1fr)] md:gap-x-10">
+            <h2 className="label pt-2 text-signal">Profile</h2>
+            <p className="max-w-[68ch] text-[1.125rem] leading-[1.7] md:text-[1.25rem]">
+              {basics.summary}
+            </p>
+          </div>
+        </section>
+
+        <Work />
+        <Projects />
+        <Stack />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   )
 }
-

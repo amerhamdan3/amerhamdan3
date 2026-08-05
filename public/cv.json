@@ -1,0 +1,329 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Amer Hamdan",
+    "label": "Senior Full-Stack Engineer · Tech Lead · AI-Product Development",
+    "image": "https://amerhamdan.com/profile.jpg",
+    "email": "amer.m.hamdan@gmail.com",
+    "phone": "+90 553 327 11 00",
+    "url": "https://amerhamdan.com",
+    "summary": "Senior full-stack engineer and team lead with ten years building and rebuilding production web platforms across news, recruitment, healthcare research, and SaaS. Leads small teams through legacy migrations — PHP to Laravel, WordPress to Next.js — and ships the result with measurable gains in performance, engagement, and delivery rate. Comfortable owning the whole path: data model, API, interface, cloud deployment, and the SEO and Core Web Vitals work that decides whether anyone finds the product at all.",
+    "location": {
+      "city": "Istanbul",
+      "region": "Istanbul",
+      "countryCode": "TR"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "amerhamdan3",
+        "url": "https://github.com/amerhamdan3"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "amerhamdan3",
+        "url": "https://www.linkedin.com/in/amerhamdan3/"
+      },
+      {
+        "network": "WhatsApp",
+        "username": "+905533271100",
+        "url": "https://wa.me/905533271100"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "ID8 Media",
+      "position": "Senior Full-Stack Developer / Team Lead",
+      "location": "Istanbul, Türkiye",
+      "startDate": "2023-01",
+      "summary": "Lead engineer across the agency's product portfolio — multi-client platforms, newsroom tooling, and large-scale hiring products.",
+      "highlights": [
+        "Raised project success rate 25% by leading development teams through 5 complex, concurrent client builds.",
+        "Improved software efficiency 15% for news agencies by engineering tailored publishing and content-delivery solutions.",
+        "Built large-scale global hiring platforms handling multi-region job data and employer workflows.",
+        "Own the delivery pipeline for multi-client sites: architecture, code review, deployment, and post-launch performance."
+      ]
+    },
+    {
+      "name": "Multifaith Alliance",
+      "position": "Web Lead & Site Administrator",
+      "location": "New York, United States (remote)",
+      "url": "https://multifaithalliance.org",
+      "startDate": "2021-01",
+      "summary": "Rebuilt and now maintain the public platform for a US non-profit working across the MENA region.",
+      "highlights": [
+        "Improved site performance 70% by rebuilding the entire site with Next.js and Tailwind CSS.",
+        "Migrated a legacy WordPress installation to a fully custom modern stack with no loss of content or search ranking.",
+        "Built dynamic page types and a reusable component system the non-profit's staff can extend without a developer.",
+        "Reworked SEO structure, page-load speed, responsive behaviour, and production deployment."
+      ]
+    },
+    {
+      "name": "Amenu (SaaS)",
+      "position": "Founder & CEO",
+      "location": "Global",
+      "startDate": "2020-01",
+      "summary": "Menu-management SaaS for restaurants, designed, built, and operated solo.",
+      "highlights": [
+        "Grew to 1,000+ active users, demonstrating real market adoption without a sales team.",
+        "Shipped three major versions, each iterating on features, onboarding, and performance from live usage data.",
+        "Built and run the full stack independently — product, front end, back end, billing, infrastructure, and support."
+      ]
+    },
+    {
+      "name": "Orient News",
+      "position": "Head of Developers Team",
+      "location": "Dubai, United Arab Emirates",
+      "startDate": "2021-01",
+      "endDate": "2023-01",
+      "summary": "Led the engineering team behind the digital transformation of a major regional news agency.",
+      "highlights": [
+        "Increased user engagement 30% by leading the development of a new website for a major news agency.",
+        "Boosted platform performance 30% by migrating the newsroom from native PHP to Laravel.",
+        "Built and led the development team from scratch, setting review standards and release process.",
+        "Owned the SEO strategy and content architecture, growing organic traffic and improving Core Web Vitals."
+      ]
+    },
+    {
+      "name": "Alpha Creative Agency",
+      "position": "Head of Developers",
+      "location": "Istanbul, Türkiye",
+      "startDate": "2016-01",
+      "endDate": "2021-01",
+      "summary": "Ran the programming team at a full-service creative agency.",
+      "highlights": [
+        "Delivered 21+ production websites across client industries.",
+        "Led the programming team day to day, from scoping through delivery and handover.",
+        "Designed and implemented admin panels and front-end interfaces for clients with no in-house technical staff."
+      ]
+    },
+    {
+      "name": "Freelance",
+      "position": "SEO & Technical Consultant",
+      "location": "Global",
+      "startDate": "2020-01",
+      "summary": "Independent technical SEO and site-health consulting.",
+      "highlights": [
+        "Delivered comprehensive site status analyses for 100 clients, translating audits into ranked action lists.",
+        "Improved client execution efficiency 15% by replacing vague audit reports with prioritised, detailed to-do lists.",
+        "Ongoing technical and on-page SEO work: crawlability, structure, speed, and search visibility."
+      ]
+    },
+    {
+      "name": "Inhouse Global",
+      "position": "Senior Consultant",
+      "location": "Istanbul, Türkiye",
+      "startDate": "2020-01",
+      "endDate": "2021-01",
+      "summary": "Built and supported the company's web presence and supporting infrastructure.",
+      "highlights": [
+        "Increased user engagement 30% by developing a fully functional website from scratch.",
+        "Managed network infrastructure and server requirements alongside the application itself.",
+        "Maintained the site, resolved production issues, and trained internal users on the system."
+      ]
+    },
+    {
+      "name": "Job2Go Recruitment Agency",
+      "position": "Full-Stack Web Developer",
+      "location": "Wales, United Kingdom",
+      "startDate": "2019-01",
+      "endDate": "2020-01",
+      "summary": "Built the technical foundation for a UK job-opportunities platform.",
+      "highlights": [
+        "Reduced downtime 30% by defining the site roadmap and establishing robust server infrastructure.",
+        "Increased production efficiency 15% by introducing the tooling and systems the team was missing.",
+        "Contributed to hiring and onboarding new team members as the company scaled."
+      ]
+    },
+    {
+      "name": "Questionnaire Connect",
+      "position": "Full-Stack Web Developer",
+      "location": "United States (remote)",
+      "startDate": "2018-01",
+      "endDate": "2019-01",
+      "summary": "Built a web-based survey platform for healthcare providers.",
+      "highlights": [
+        "Increased survey response rate 35% by developing a purpose-built web application for Questionnaire Connect®.",
+        "Cut roughly $20,000 from feedback-collection costs by distributing 5,000 surveys online instead of on paper.",
+        "Improved how providers collect, store, and analyse patient treatment feedback."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Orient News Platform",
+      "description": "Full digital transformation of a regional news agency: legacy native PHP rebuilt on Laravel, then a Next.js front end on top for speed and search.",
+      "highlights": [
+        "+30% engagement · +30% platform performance",
+        "Migrated the newsroom off native PHP without interrupting publishing",
+        "Built and led the engineering team from zero",
+        "Restructured content architecture and technical SEO",
+        "Optimised Core Web Vitals across article and index pages"
+      ],
+      "keywords": [
+        "Laravel",
+        "PHP",
+        "Next.js",
+        "React",
+        "SEO"
+      ],
+      "entity": "Orient News",
+      "type": "application"
+    },
+    {
+      "name": "Multifaith Alliance",
+      "description": "Complete rebuild of a US non-profit's public platform, moving from WordPress to a custom Next.js and Tailwind stack with a reusable component system.",
+      "highlights": [
+        "+70% site performance",
+        "WordPress → Next.js migration with content and rankings preserved",
+        "Dynamic page types staff can compose without a developer",
+        "SEO structure and page-load rework",
+        "Responsive design and production deployment pipeline"
+      ],
+      "keywords": [
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Migration",
+        "SEO"
+      ],
+      "url": "https://multifaithalliance.org",
+      "entity": "Multifaith Alliance",
+      "type": "application"
+    },
+    {
+      "name": "Amenu",
+      "description": "Menu-management SaaS for restaurants. Built solo end to end and iterated across three major versions based on how real venues actually used it.",
+      "highlights": [
+        "1,000+ active users",
+        "Front end, back end, infrastructure, and support owned solo",
+        "Three shipped versions driven by live usage data",
+        "Multi-tenant architecture for independent venues",
+        "Sustained adoption with no sales team"
+      ],
+      "keywords": [
+        "SaaS",
+        "Node.js",
+        "Product",
+        "Multi-tenant"
+      ],
+      "entity": "Independent",
+      "type": "application"
+    },
+    {
+      "name": "Global Hiring Platforms",
+      "description": "Large-scale recruitment platforms handling multi-region job data, employer workflows, and candidate matching, delivered alongside multi-client site operations.",
+      "highlights": [
+        "+25% project success rate across 5 builds",
+        "Multi-region job data models and employer workflows",
+        "Led concurrent delivery across five complex builds",
+        "Shared component and deployment standards across clients",
+        "Cloud Run deployment with CI/CD"
+      ],
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "Google Cloud Run",
+        "Docker"
+      ],
+      "entity": "ID8 Media",
+      "type": "application"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Backend",
+      "keywords": [
+        "Node.js",
+        "Express.js",
+        "Laravel (PHP)",
+        "Strapi",
+        "RESTful API design",
+        "Authentication",
+        "Role & permission systems",
+        "Caching"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "keywords": [
+        "TypeScript",
+        "JavaScript",
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "HTML5",
+        "CSS3",
+        "Responsive design",
+        "UI/UX",
+        "shadcn/ui",
+        "Material UI",
+        "REST API integration"
+      ]
+    },
+    {
+      "name": "Data",
+      "keywords": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "Prisma ORM",
+        "Schema design"
+      ]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "keywords": [
+        "Google Cloud Run",
+        "Google Cloud Build",
+        "Docker",
+        "Linux server management",
+        "Nginx",
+        "CI/CD pipelines",
+        "Git",
+        "GitHub"
+      ]
+    },
+    {
+      "name": "AI Integration",
+      "keywords": [
+        "LLM API integration",
+        "AI-assisted product features",
+        "Workflow automation",
+        "AI-assisted development tooling"
+      ]
+    },
+    {
+      "name": "Practice",
+      "keywords": [
+        "Technical & on-page SEO",
+        "Core Web Vitals",
+        "Team leadership",
+        "Agile / Scrum",
+        "Accessible layouts",
+        "Jira, Trello, Slack"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Arabic",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional working proficiency"
+    },
+    {
+      "language": "Turkish",
+      "fluency": "Advanced"
+    }
+  ],
+  "meta": {
+    "canonical": "https://amerhamdan.com/cv.json",
+    "version": "v1.0.0",
+    "lastModified": "2026-08-05"
+  }
+}

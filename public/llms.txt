@@ -1,0 +1,38 @@
+# Amer Hamdan
+
+> Senior Full-Stack Engineer · Tech Lead · AI-Product Development. Based in Istanbul, Türkiye. Open to senior full-stack, tech lead, and AI-product roles — remote or Istanbul.
+
+Senior full-stack engineer and team lead with ten years building and rebuilding production web platforms across news, recruitment, healthcare research, and SaaS. Leads small teams through legacy migrations — PHP to Laravel, WordPress to Next.js — and ships the result with measurable gains in performance, engagement, and delivery rate. Comfortable owning the whole path: data model, API, interface, cloud deployment, and the SEO and Core Web Vitals work that decides whether anyone finds the product at all.
+
+## Contact
+- Email: amer.m.hamdan@gmail.com
+- Phone: +90 553 327 11 00
+- Website: https://amerhamdan.com
+- GitHub: https://github.com/amerhamdan3
+- LinkedIn: https://www.linkedin.com/in/amerhamdan3/
+- WhatsApp: https://wa.me/905533271100
+
+## Currently
+- Senior Full-Stack Developer / Team Lead, ID8 Media (2023 — Present) — Lead engineer across the agency's product portfolio — multi-client platforms, newsroom tooling, and large-scale hiring products.
+- Web Lead & Site Administrator, Multifaith Alliance (2021 — Present) — Rebuilt and now maintain the public platform for a US non-profit working across the MENA region.
+- Founder & CEO, Amenu (SaaS) (2020 — Present) — Menu-management SaaS for restaurants, designed, built, and operated solo.
+- SEO & Technical Consultant, Freelance (2020 — Present) — Independent technical SEO and site-health consulting.
+
+## Full CV
+- [PDF](https://amerhamdan.com/Amer-Hamdan-CV.pdf): formatted CV for humans and applicant tracking systems
+- [JSON](https://amerhamdan.com/cv.json): JSON Resume schema v1.0.0, the structured source of record
+- [Plain text](https://amerhamdan.com/cv.txt): unstyled text of the whole CV
+- [HTML](https://amerhamdan.com/cv): the same CV as a web page
+
+## Core skills
+- Backend: Node.js, Express.js, Laravel (PHP), Strapi, RESTful API design, Authentication, Role & permission systems, Caching
+- Frontend: TypeScript, JavaScript, React, Next.js, Tailwind CSS, HTML5, CSS3, Responsive design, UI/UX, shadcn/ui, Material UI, REST API integration
+- Data: MySQL, PostgreSQL, MongoDB, Prisma ORM, Schema design
+- Cloud & DevOps: Google Cloud Run, Google Cloud Build, Docker, Linux server management, Nginx, CI/CD pipelines, Git, GitHub
+- AI Integration: LLM API integration, AI-assisted product features, Workflow automation, AI-assisted development tooling
+- Practice: Technical & on-page SEO, Core Web Vitals, Team leadership, Agile / Scrum, Accessible layouts, Jira, Trello, Slack
+
+## Languages
+- Arabic: Native
+- English: Professional working proficiency
+- Turkish: Advanced

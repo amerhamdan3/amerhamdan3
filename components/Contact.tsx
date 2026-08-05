@@ -1,123 +1,108 @@
-'use client'
+import { CV_FILE, CV_FORMATS, basics } from '@/lib/resume'
 
-import { motion } from 'framer-motion'
+// WhatsApp is the same number as the phone line, so it rides along with it
+// instead of taking a column of its own.
+const channels = [
+  { field: 'Email', value: basics.email, href: `mailto:${basics.email}` },
+  { field: 'Phone / WhatsApp', value: basics.phone, href: `https://wa.me/${basics.phoneRaw.replace('+', '')}` },
+  ...basics.profiles
+    .filter((profile) => profile.network !== 'WhatsApp')
+    .map((profile) => ({
+      field: profile.network,
+      value: profile.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''),
+      href: profile.url,
+    })),
+]
 
 export default function Contact() {
-  const contactMethods = [
-    {
-      icon: '📧',
-      label: 'Email',
-      value: 'amer.m.hamdan@gmail.com',
-      href: 'mailto:amer.m.hamdan@gmail.com',
-      color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      icon: '💼',
-      label: 'LinkedIn',
-      value: 'Connect with me',
-      href: 'https://www.linkedin.com/in/amerhamdan3/',
-      color: 'from-blue-600 to-blue-400',
-    },
-    {
-      icon: '💻',
-      label: 'GitHub',
-      value: '@amerhamdan3',
-      href: 'https://github.com/amerhamdan3',
-      color: 'from-gray-500 to-gray-700',
-    },
-    {
-      icon: '💬',
-      label: 'WhatsApp',
-      value: '+905533271100',
-      href: 'https://wa.me/905533271100',
-      color: 'from-green-500 to-green-600',
-    },
-  ]
-
   return (
-    <section id="contact" className="py-20 px-6">
-      <div className="container mx-auto max-w-4xl">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
-            Let's Connect! <span className="gradient-text">🤝</span>
-          </h2>
-          <p className="text-center text-gray-400 mb-12 text-lg">
-            Got a project in mind? Want to collaborate? Or just want to say hi? 
-            <br />
-            I'm always excited to hear about new opportunities and ideas!
-          </p>
+    <section id="contact" className="border-t border-rule bg-ink text-paper">
+      <div className="mx-auto max-w-shell px-6 py-20 md:py-28">
+        <div className="flex items-baseline gap-4">
+          <span className="label whitespace-nowrap text-flare">Contact</span>
+          <span aria-hidden className="h-px flex-1 bg-paper/20" />
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {contactMethods.map((method, index) => (
-              <motion.a
-                key={index}
-                href={method.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700 hover:border-primary/50 transition-all group"
-              >
-                <div className="flex items-center gap-4">
-                  <motion.div
-                    className="text-5xl"
-                    whileHover={{ scale: 1.2, rotate: 10 }}
-                  >
-                    {method.icon}
-                  </motion.div>
-                  <div>
-                    <p className={`text-sm font-semibold bg-gradient-to-r ${method.color} bg-clip-text text-transparent`}>
-                      {method.label}
-                    </p>
-                    <p className="text-gray-300 group-hover:text-primary transition-colors">
-                      {method.value}
-                    </p>
-                  </div>
-                </div>
-              </motion.a>
-            ))}
+        <div className="mt-8 grid gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+          <div>
+            <h2 className="font-display text-[clamp(1.875rem,4.5vw,3rem)] font-semibold leading-tight tracking-[-0.025em]">
+              Take the CV with you
+            </h2>
+            <p className="mt-5 max-w-measure text-[1.0625rem] leading-[1.65] text-paper/70">
+              {basics.availability} The fastest way to reach me is email — I answer within a day.
+            </p>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20 text-center"
-          >
-            <div className="text-6xl mb-4">☕</div>
-            <h3 className="text-2xl font-bold mb-3">Coffee Chat?</h3>
-            <p className="text-gray-300 mb-6">
-              I'm always up for a good conversation about tech, projects, or anything interesting. 
-              Whether you're looking to build something amazing or just want to discuss the latest 
-              in web development and AI, feel free to reach out!
-            </p>
-            <div className="flex justify-center gap-4 flex-wrap">
-              <span className="px-4 py-2 bg-gray-700/50 rounded-full text-sm">🌍 Remote-friendly</span>
-              <span className="px-4 py-2 bg-gray-700/50 rounded-full text-sm">⏰ Flexible hours</span>
-              <span className="px-4 py-2 bg-gray-700/50 rounded-full text-sm">🚀 Fast responder</span>
-            </div>
-          </motion.div>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={CV_FILE}
+              download
+              className="btn border-flare bg-flare text-ink transition-colors hover:border-paper hover:bg-paper"
+            >
+              Download CV
+              <span aria-hidden>↓</span>
+            </a>
+            <a
+              href={`mailto:${basics.email}`}
+              className="btn border-paper/30 text-paper transition-colors hover:border-paper hover:bg-paper hover:text-ink"
+            >
+              Email me
+            </a>
+          </div>
+        </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mt-8 text-center"
-          >
-            <p className="text-gray-400">
-              P.S. - If my response is delayed, it's probably because my cat is sitting on my keyboard 🐱⌨️
-            </p>
-          </motion.div>
-        </motion.div>
+        {/* The same record in three formats. Recruiters take the PDF; parsers and
+            agents get something they do not have to guess at. */}
+        <ul className="mt-16 grid gap-px bg-paper/15 md:grid-cols-3">
+          {CV_FORMATS.map((format) => (
+            <li key={format.label} className="bg-ink">
+              <a
+                href={format.href}
+                {...(format.label === 'PDF' ? { download: true } : {})}
+                className="group flex h-full flex-col p-7 transition-colors hover:bg-paper/[0.06]"
+              >
+                <span className="label text-flare">{format.label}</span>
+                <span className="mt-3 font-display text-lg font-medium">
+                  {format.href.replace('/', '')}
+                </span>
+                <span className="mt-1.5 text-sm leading-relaxed text-paper/60">{format.note}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-5 max-w-[70ch] font-mono text-xs leading-relaxed text-paper/50">
+          The JSON follows the JSON Resume schema, so an applicant tracking system or an AI agent can
+          read the whole record without parsing a document. There is a{' '}
+          <a href="/llms.txt" className="text-paper/80 underline underline-offset-4 hover:text-flare">
+            /llms.txt
+          </a>{' '}
+          too, and the CV is also{' '}
+          <a href="/cv" className="text-paper/80 underline underline-offset-4 hover:text-flare">
+            a plain web page
+          </a>
+          .
+        </p>
+
+        <dl className="mt-16 grid gap-px border-t border-paper/15 sm:grid-cols-2 lg:grid-cols-4">
+          {channels.map((channel) => (
+            <div key={channel.field} className="py-6 sm:pr-8">
+              <dt className="label">{channel.field}</dt>
+              <dd className="mt-2">
+                <a
+                  href={channel.href}
+                  {...(channel.href.startsWith('http')
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {})}
+                  className="break-words font-display text-[0.9375rem] font-medium underline decoration-paper/25 underline-offset-4 transition-colors hover:decoration-flare"
+                >
+                  {channel.value}
+                </a>
+              </dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   )
 }
-

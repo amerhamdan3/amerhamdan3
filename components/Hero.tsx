@@ -1,136 +1,85 @@
-'use client'
+import { CV_FILE, CAREER_START, basics } from '@/lib/resume'
 
-import { motion } from 'framer-motion'
+const spec = [
+  { field: 'Based', value: `${basics.location.city}, ${basics.location.country}`, sub: 'Remote-friendly' },
+  { field: 'Open to', value: 'Senior full-stack · Tech lead', sub: 'AI-product · Architecture' },
+  { field: 'Core stack', value: 'TypeScript · Next.js · Node', sub: 'Laravel · PostgreSQL · GCP' },
+  { field: 'Span', value: `${CAREER_START} — present`, sub: 'Ten years in production' },
+]
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
+    <section id="top" className="relative overflow-hidden border-b border-rule">
+      <div aria-hidden className="grid-paper grid-paper-fade absolute inset-0" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-6xl mx-auto"
-        >
-          {/* Profile Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-3xl blur-2xl opacity-50"></div>
-              <img
-                src="/profile.png"
-                alt="Amer Hamdan"
-                className="relative  h-64 md:h-80 object-cover rounded-3xl border-4 border-primary/50 shadow-2xl hover:border-primary transition-all duration-300"
-              />
-            </motion.div>
-          </motion.div>
+      <div className="relative mx-auto max-w-shell px-6 pb-14 pt-20 md:pt-28">
+        <div className="grid gap-12 md:grid-cols-[minmax(0,1fr)_auto] md:items-end md:gap-16">
+          <div>
+            <p className="rise label text-signal">{basics.eyebrow}</p>
 
-          {/* Text Content */}
-          <div className="text-center md:text-left flex-1">
-            <motion.div
-              className="text-6xl mb-4 inline-block"
-              animate={{ rotate: [0, 20, -20, 0] }}
-              transition={{ duration: 2.5, repeat: Infinity }}
+            <h1
+              className="rise mt-6 font-display text-[clamp(3.5rem,12vw,9rem)] font-bold leading-[0.85] tracking-[-0.035em]"
+              style={{ animationDelay: '60ms' }}
             >
-              👋
-            </motion.div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Hi, I'm <span className="gradient-text">Amer Hamdan</span>
+              <span className="block">Amer</span>
+              <span className="block">Hamdan</span>
             </h1>
-          
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="text-xl md:text-2xl text-gray-300 mb-8"
-            >
-              Full Stack Developer 🚀 | Laravel Expert 💜 | Next.js Enthusiast ⚡
-            </motion.p>
-            
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="text-lg text-gray-400 mb-12"
-            >
-              I turn coffee ☕ into code, ideas into reality, and bugs into features
-              <br />
-              <span className="text-sm">(just kidding about the bugs... mostly)</span>
-            </motion.p>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-              className="flex gap-4 justify-center md:justify-start"
-            >
-              <motion.a
-                href="#contact"
-                className="px-8 py-3 bg-gradient-to-r from-primary to-secondary rounded-full font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Let's Talk 💬
-              </motion.a>
-              <motion.a
-                href="#projects"
-                className="px-8 py-3 border-2 border-primary rounded-full font-semibold hover:bg-primary/10 transition-all"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                View My Work 👀
-              </motion.a>
-            </motion.div>
-          </div>
-        </motion.div>
-      </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="text-4xl">👇</div>
-      </motion.div>
+            <p
+              className="rise mt-8 max-w-measure text-[1.0625rem] leading-[1.65] text-slate"
+              style={{ animationDelay: '120ms' }}
+            >
+              {basics.thesis}
+            </p>
+
+            <div
+              className="rise mt-9 flex flex-wrap items-center gap-3"
+              style={{ animationDelay: '180ms' }}
+            >
+              <a href={CV_FILE} download className="btn btn-primary">
+                Download CV
+                <span aria-hidden>↓</span>
+              </a>
+              <a href={`mailto:${basics.email}`} className="btn btn-ghost">
+                Email me
+              </a>
+            </div>
+          </div>
+
+          <figure className="rise order-first md:order-none" style={{ animationDelay: '90ms' }}>
+            <div className="w-44 border border-rule bg-wash sm:w-52 md:w-64">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/profile.webp"
+                alt={`${basics.name}, ${basics.label}`}
+                width={760}
+                height={1140}
+                className="block h-auto w-full"
+              />
+            </div>
+            <figcaption className="label mt-3">
+              {basics.location.city}, {basics.location.countryCode}
+            </figcaption>
+          </figure>
+        </div>
+
+        {/* Spec sheet: the four things a hiring manager checks before reading further. */}
+        <dl className="mt-16 grid border-t border-rule sm:grid-cols-2 lg:grid-cols-4">
+          {spec.map((item, i) => (
+            <div
+              key={item.field}
+              className="rise border-b border-rule py-5 sm:px-6 sm:first:pl-0 lg:border-b-0 lg:border-r lg:last:border-r-0"
+              style={{ animationDelay: `${240 + i * 60}ms` }}
+            >
+              <dt className="label">{item.field}</dt>
+              <dd className="mt-2 font-display text-[0.9375rem] font-medium leading-snug">
+                {item.value}
+              </dd>
+              <dd className="mt-1 font-mono text-[0.6875rem] leading-snug text-slate">{item.sub}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
     </section>
   )
 }
-
