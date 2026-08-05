@@ -18,8 +18,8 @@
       "countryCode": "TR"
     },
     "availability": "Open to senior full-stack, tech lead, and AI-product roles — remote or Istanbul.",
-    "thesis": "Ten years of shipping and re-shipping production web systems: news platforms, global hiring marketplaces, a restaurant SaaS with 1,000+ active users. Most of the work is migration — taking something slow and legacy and rebuilding it without ever turning it off.",
-    "summary": "Senior full-stack engineer and team lead with ten years building and rebuilding production web platforms across news, recruitment, healthcare research, and SaaS. Leads small teams through legacy migrations — PHP to Laravel, WordPress to Next.js — and ships the result with measurable gains in performance, engagement, and delivery rate. Comfortable owning the whole path: data model, API, interface, cloud deployment, and the SEO and Core Web Vitals work that decides whether anyone finds the product at all.",
+    "thesis": "Ten years of production web systems, and lately a lot of platform work: a capability-intelligence product built on Go and Postgres, an OpenAI-compatible AI gateway, social-listening dashboards, a multi-tenant commerce SaaS. Before that, mostly migrations — taking something slow and legacy and rebuilding it without ever turning it off.",
+    "summary": "Senior full-stack engineer and team lead with ten years building production web platforms across intelligence, news, recruitment, and commerce. Currently a lead contributor on a multi-product intelligence platform written in Go and TypeScript — a GraphQL/REST/WebSocket API over PostgreSQL, an OpenAI-compatible AI gateway with RAG and per-token billing, and a bilingual Next.js dashboard, all deployed to GKE and Cloud Run. Earlier work was mostly legacy migration: PHP to Laravel, WordPress to Next.js, with measurable gains in performance and engagement each time. Comfortable owning the whole path from schema to interface to infrastructure.",
     "profiles": [
       {
         "network": "GitHub",
@@ -38,14 +38,28 @@
       }
     ]
   },
-
   "metrics": [
-    { "figure": "10 yrs", "label": "Building for production", "note": "2016 — Present" },
-    { "figure": "+70%", "label": "Performance gain", "note": "WordPress → Next.js rebuild" },
-    { "figure": "1,000+", "label": "Active SaaS users", "note": "Amenu, built solo" },
-    { "figure": "21+", "label": "Sites delivered", "note": "As team lead at Alpha Creative" }
+    {
+      "figure": "10 yrs",
+      "label": "Building for production",
+      "note": "2016 — Present"
+    },
+    {
+      "figure": "+70%",
+      "label": "Performance gain",
+      "note": "WordPress → Next.js rebuild"
+    },
+    {
+      "figure": "1,000+",
+      "label": "Active SaaS users",
+      "note": "Amenu, built solo"
+    },
+    {
+      "figure": "5",
+      "label": "LLM providers behind one API",
+      "note": "Cortex AI gateway"
+    }
   ],
-
   "work": [
     {
       "id": "id8",
@@ -57,14 +71,24 @@
       "startYear": 2023,
       "endYear": 2026,
       "featured": true,
-      "summary": "Lead engineer across the agency's product portfolio — multi-client platforms, newsroom tooling, and large-scale hiring products.",
+      "summary": "Lead engineer across the agency portfolio and its intelligence platform — Go and TypeScript services, AI infrastructure, client dashboards, and large-scale hiring products.",
       "highlights": [
+        "Lead contributor on Sentra, a capability-intelligence platform: a Go binary serving GraphQL, REST, and WebSocket APIs over PostgreSQL, with a bilingual EN/AR Next.js dashboard.",
+        "Built Cortex, an OpenAI-compatible AI gateway brokering five model providers behind one token, with per-token usage metering, billing, and RAG on pgvector.",
         "Raised project success rate 25% by leading development teams through 5 complex, concurrent client builds.",
         "Improved software efficiency 15% for news agencies by engineering tailored publishing and content-delivery solutions.",
         "Built large-scale global hiring platforms handling multi-region job data and employer workflows.",
-        "Own the delivery pipeline for multi-client sites: architecture, code review, deployment, and post-launch performance."
+        "Own the delivery pipeline across clients: architecture, code review, Terraform-managed GKE and Cloud Run deploys, and post-launch performance."
       ],
-      "keywords": ["Team leadership", "Next.js", "Node.js", "TypeScript", "Laravel", "Google Cloud Run"]
+      "keywords": [
+        "Go",
+        "TypeScript",
+        "Next.js",
+        "PostgreSQL",
+        "LLM infrastructure",
+        "Google Cloud",
+        "Team leadership"
+      ]
     },
     {
       "id": "multifaith",
@@ -84,7 +108,13 @@
         "Built dynamic page types and a reusable component system the non-profit's staff can extend without a developer.",
         "Reworked SEO structure, page-load speed, responsive behaviour, and production deployment."
       ],
-      "keywords": ["Next.js", "Tailwind CSS", "SEO", "Migration", "Core Web Vitals"]
+      "keywords": [
+        "Next.js",
+        "Tailwind CSS",
+        "SEO",
+        "Migration",
+        "Core Web Vitals"
+      ]
     },
     {
       "id": "amenu",
@@ -102,7 +132,12 @@
         "Shipped three major versions, each iterating on features, onboarding, and performance from live usage data.",
         "Built and run the full stack independently — product, front end, back end, billing, infrastructure, and support."
       ],
-      "keywords": ["SaaS", "Product ownership", "Full-stack", "Multi-tenant"]
+      "keywords": [
+        "SaaS",
+        "Product ownership",
+        "Full-stack",
+        "Multi-tenant"
+      ]
     },
     {
       "id": "orient",
@@ -121,7 +156,13 @@
         "Built and led the development team from scratch, setting review standards and release process.",
         "Owned the SEO strategy and content architecture, growing organic traffic and improving Core Web Vitals."
       ],
-      "keywords": ["Laravel", "PHP", "Next.js", "Technical SEO", "Team building"]
+      "keywords": [
+        "Laravel",
+        "PHP",
+        "Next.js",
+        "Technical SEO",
+        "Team building"
+      ]
     },
     {
       "id": "alpha",
@@ -139,7 +180,12 @@
         "Led the programming team day to day, from scoping through delivery and handover.",
         "Designed and implemented admin panels and front-end interfaces for clients with no in-house technical staff."
       ],
-      "keywords": ["PHP", "Team leadership", "Admin systems", "Front-end"]
+      "keywords": [
+        "PHP",
+        "Team leadership",
+        "Admin systems",
+        "Front-end"
+      ]
     },
     {
       "id": "seo",
@@ -157,7 +203,12 @@
         "Improved client execution efficiency 15% by replacing vague audit reports with prioritised, detailed to-do lists.",
         "Ongoing technical and on-page SEO work: crawlability, structure, speed, and search visibility."
       ],
-      "keywords": ["Technical SEO", "On-page SEO", "Site audits", "Performance"]
+      "keywords": [
+        "Technical SEO",
+        "On-page SEO",
+        "Site audits",
+        "Performance"
+      ]
     },
     {
       "id": "inhouse",
@@ -175,7 +226,11 @@
         "Managed network infrastructure and server requirements alongside the application itself.",
         "Maintained the site, resolved production issues, and trained internal users on the system."
       ],
-      "keywords": ["Full-stack", "Server administration", "Training"]
+      "keywords": [
+        "Full-stack",
+        "Server administration",
+        "Training"
+      ]
     },
     {
       "id": "job2go",
@@ -193,7 +248,11 @@
         "Increased production efficiency 15% by introducing the tooling and systems the team was missing.",
         "Contributed to hiring and onboarding new team members as the company scaled."
       ],
-      "keywords": ["Full-stack", "Infrastructure", "Recruitment tech"]
+      "keywords": [
+        "Full-stack",
+        "Infrastructure",
+        "Recruitment tech"
+      ]
     },
     {
       "id": "qconnect",
@@ -211,11 +270,143 @@
         "Cut roughly $20,000 from feedback-collection costs by distributing 5,000 surveys online instead of on paper.",
         "Improved how providers collect, store, and analyse patient treatment feedback."
       ],
-      "keywords": ["Healthcare", "Survey platform", "Data collection"]
+      "keywords": [
+        "Healthcare",
+        "Survey platform",
+        "Data collection"
+      ]
     }
   ],
-
   "projects": [
+    {
+      "id": "sentra",
+      "name": "Sentra",
+      "org": "ID8 Media",
+      "period": "2025 — Present",
+      "description": "Capability-intelligence platform that collects, enriches, and surfaces structured intelligence — alerts, narratives, events, entity networks, briefings — over GraphQL, REST, and WebSocket APIs backed by PostgreSQL.",
+      "outcome": "Lead contributor · 1,000+ commits to the core",
+      "highlights": [
+        "One Go binary hosting the bridge API, the plugin host, and a Postgres LISTEN/NOTIFY WebSocket hub",
+        "Bilingual EN/AR Next.js dashboard with full RTL support",
+        "Per-product databases with cross-product data flowing only over NATS seams",
+        "Terraform-managed GKE and Cloud Run across dev, stage, and live"
+      ],
+      "keywords": [
+        "Go",
+        "TypeScript",
+        "Next.js",
+        "PostgreSQL",
+        "GraphQL",
+        "NATS",
+        "WebSockets",
+        "GKE"
+      ]
+    },
+    {
+      "id": "cortex",
+      "name": "Cortex — AI gateway",
+      "org": "ID8 Media",
+      "period": "2026 — Present",
+      "description": "Stream-first AI gateway sitting between model providers and the applications that consume them. Callers speak plain OpenAI API with a Cortex-issued token; Cortex routes to the right upstream and meters that token for billing, so provider keys never leave the gateway.",
+      "outcome": "Five model providers behind one API",
+      "highlights": [
+        "OpenAI-compatible broker across Gemini, OpenAI, Grok, Anthropic, and Ollama",
+        "Per-token usage metering and per-consumer billing",
+        "Built-in RAG on pgvector and pg_search",
+        "Machine translation and agent operations tooling"
+      ],
+      "keywords": [
+        "Go",
+        "LLM routing",
+        "RAG",
+        "pgvector",
+        "OpenAI API",
+        "Metering & billing"
+      ]
+    },
+    {
+      "id": "social-listening",
+      "name": "Social listening dashboards",
+      "org": "ID8 Media",
+      "period": "2025 — 2026",
+      "description": "Media-intelligence dashboards that ingest X, Instagram, and Facebook and surface sentiment, trending entities, topics, and risk assessment for communications teams.",
+      "outcome": "Hourly ingestion across three platforms",
+      "highlights": [
+        "Automated hourly collection into Firestore, triggered by Cloud Scheduler",
+        "Sentiment detection and entity tracking over mixed social and news sources",
+        "Trend analysis surfacing emerging hashtags and keywords",
+        "Next.js 15 and shadcn/ui dashboards built for non-technical analysts"
+      ],
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Firebase",
+        "Sentiment analysis",
+        "Cloud Scheduler"
+      ]
+    },
+    {
+      "id": "mpasha",
+      "name": "Medhat Pasha",
+      "org": "Independent",
+      "period": "2026 — Present",
+      "description": "Multi-tenant e-commerce platform for the Syrian market — a single engine powering unlimited Arabic storefronts, built for merchants with no technical staff and tuned for slow connections.",
+      "outcome": "Multi-tenant commerce SaaS, built solo",
+      "highlights": [
+        "Arabic-first interface with full RTL support throughout",
+        "Monorepo: Node.js and Express TypeScript API alongside the storefront",
+        "Cash-on-delivery order flow matched to how the local market actually buys",
+        "Automated WebP optimisation and real-time analytics on a 3G performance budget"
+      ],
+      "keywords": [
+        "TypeScript",
+        "Next.js",
+        "Express",
+        "Multi-tenant",
+        "Monorepo",
+        "RTL"
+      ]
+    },
+    {
+      "id": "yoho",
+      "name": "YOHO Works",
+      "org": "ID8 Media",
+      "period": "2025",
+      "description": "Global hiring platform covering multi-region job data, employer workflows, and candidate matching, delivered as a Next.js front end against a TypeScript API.",
+      "outcome": "Front end and API, ~200 commits",
+      "highlights": [
+        "Multi-region job data models and employer workflows",
+        "Candidate-facing search and application flow",
+        "Shared component system reused across the agency portfolio"
+      ],
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": "reson8",
+      "name": "Reson8",
+      "org": "ID8 Media",
+      "period": "2023 — Present",
+      "description": "Media platform spanning a client panel, admin tooling, an elections API, and serverless functions, later re-architected onto Go with its own database and message bus.",
+      "outcome": "Six repositories, front to back",
+      "highlights": [
+        "Client and admin panels in Next.js and TypeScript",
+        "Firebase Cloud Functions for scheduled and event-driven work",
+        "Elections API delivering live results under load",
+        "Re-architecture onto a Go service with dedicated Postgres and NATS"
+      ],
+      "keywords": [
+        "TypeScript",
+        "Go",
+        "Next.js",
+        "Firebase",
+        "PHP"
+      ]
+    },
     {
       "id": "orient-platform",
       "name": "Orient News Platform",
@@ -229,7 +420,13 @@
         "Restructured content architecture and technical SEO",
         "Optimised Core Web Vitals across article and index pages"
       ],
-      "keywords": ["Laravel", "PHP", "Next.js", "React", "SEO"]
+      "keywords": [
+        "Laravel",
+        "PHP",
+        "Next.js",
+        "React",
+        "SEO"
+      ]
     },
     {
       "id": "multifaith-site",
@@ -245,49 +442,39 @@
         "SEO structure and page-load rework",
         "Responsive design and production deployment pipeline"
       ],
-      "keywords": ["Next.js", "Tailwind CSS", "TypeScript", "Migration", "SEO"]
-    },
-    {
-      "id": "amenu",
-      "name": "Amenu",
-      "org": "Independent",
-      "period": "2020 — Present",
-      "description": "Menu-management SaaS for restaurants. Built solo end to end and iterated across three major versions based on how real venues actually used it.",
-      "outcome": "1,000+ active users",
-      "highlights": [
-        "Front end, back end, infrastructure, and support owned solo",
-        "Three shipped versions driven by live usage data",
-        "Multi-tenant architecture for independent venues",
-        "Sustained adoption with no sales team"
-      ],
-      "keywords": ["SaaS", "Node.js", "Product", "Multi-tenant"]
-    },
-    {
-      "id": "hiring-platforms",
-      "name": "Global Hiring Platforms",
-      "org": "ID8 Media",
-      "period": "2023 — Present",
-      "description": "Large-scale recruitment platforms handling multi-region job data, employer workflows, and candidate matching, delivered alongside multi-client site operations.",
-      "outcome": "+25% project success rate across 5 builds",
-      "highlights": [
-        "Multi-region job data models and employer workflows",
-        "Led concurrent delivery across five complex builds",
-        "Shared component and deployment standards across clients",
-        "Cloud Run deployment with CI/CD"
-      ],
-      "keywords": ["Next.js", "TypeScript", "Node.js", "Google Cloud Run", "Docker"]
+      "keywords": [
+        "Next.js",
+        "Tailwind CSS",
+        "TypeScript",
+        "Migration",
+        "SEO"
+      ]
     }
   ],
-
   "skills": [
+    {
+      "name": "Languages",
+      "keywords": [
+        "TypeScript",
+        "JavaScript",
+        "Go",
+        "PHP",
+        "Python",
+        "SQL"
+      ]
+    },
     {
       "name": "Backend",
       "keywords": [
         "Node.js",
         "Express.js",
+        "Go (Cobra)",
         "Laravel (PHP)",
         "Strapi",
-        "RESTful API design",
+        "REST API design",
+        "GraphQL",
+        "WebSockets",
+        "NATS",
         "Authentication",
         "Role & permission systems",
         "Caching"
@@ -296,50 +483,57 @@
     {
       "name": "Frontend",
       "keywords": [
-        "TypeScript",
-        "JavaScript",
         "React",
-        "Next.js",
+        "Next.js (App Router)",
+        "TypeScript",
         "Tailwind CSS",
-        "HTML5",
-        "CSS3",
-        "Responsive design",
-        "UI/UX",
         "shadcn/ui",
         "Material UI",
-        "REST API integration"
+        "Responsive design",
+        "Bilingual EN/AR & RTL",
+        "Accessible layouts",
+        "UI/UX"
+      ]
+    },
+    {
+      "name": "AI engineering",
+      "keywords": [
+        "LLM gateway architecture",
+        "OpenAI-compatible APIs",
+        "Multi-provider routing (OpenAI, Anthropic, Gemini, Grok, Ollama)",
+        "RAG (pgvector, pg_search)",
+        "Token metering & billing",
+        "Agent workflows",
+        "Sentiment & entity extraction",
+        "Machine translation"
       ]
     },
     {
       "name": "Data",
       "keywords": [
-        "MySQL",
         "PostgreSQL",
+        "MySQL",
         "MongoDB",
+        "Firestore",
         "Prisma ORM",
-        "Schema design"
+        "pgvector",
+        "Schema design",
+        "Migrations"
       ]
     },
     {
       "name": "Cloud & DevOps",
       "keywords": [
         "Google Cloud Run",
-        "Google Cloud Build",
+        "Cloud Build",
+        "Cloud Scheduler",
+        "GKE / Kubernetes",
+        "Terraform",
         "Docker",
-        "Linux server management",
         "Nginx",
+        "Linux server management",
         "CI/CD pipelines",
-        "Git",
-        "GitHub"
-      ]
-    },
-    {
-      "name": "AI Integration",
-      "keywords": [
-        "LLM API integration",
-        "AI-assisted product features",
-        "Workflow automation",
-        "AI-assisted development tooling"
+        "Git & GitHub"
       ]
     },
     {
@@ -348,16 +542,25 @@
         "Technical & on-page SEO",
         "Core Web Vitals",
         "Team leadership",
+        "Monorepos",
+        "Multi-tenant architecture",
         "Agile / Scrum",
-        "Accessible layouts",
         "Jira, Trello, Slack"
       ]
     }
   ],
-
   "languages": [
-    { "language": "Arabic", "fluency": "Native" },
-    { "language": "English", "fluency": "Professional working proficiency" },
-    { "language": "Turkish", "fluency": "Advanced" }
+    {
+      "language": "Arabic",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional working proficiency"
+    },
+    {
+      "language": "Turkish",
+      "fluency": "Advanced"
+    }
   ]
 }

@@ -36,6 +36,11 @@ const SIGNAL = '#C8442A'
 const PDF_FILE = 'Amer-Hamdan-CV.pdf'
 const TXT_FILE = 'Amer-Hamdan-CV.txt'
 
+// The PDF is held to two pages: a third page carrying only a few lines reads
+// worse than a full second one. The site and the text version carry everything.
+const PROJECTS_IN_PDF = 5
+const EARLIER_BULLETS_IN_PDF = 1
+
 const PAGE = { size: 'A4', margin: 46 }
 const WIDTH = 595.28 - PAGE.margin * 2
 const BOTTOM = 841.89 - PAGE.margin - 22 // leave room for the footer line
@@ -214,12 +219,12 @@ function buildPdf() {
       .fillColor(SLATE)
       .text(`  ·  ${w.location}  ·  ${period(w)}`)
     doc.moveDown(0.2)
-    w.highlights.slice(0, 2).forEach(bullet)
+    w.highlights.slice(0, EARLIER_BULLETS_IN_PDF).forEach(bullet)
   })
 
   /* selected projects ----------------------------------------------------- */
   heading('Selected projects')
-  projects.forEach((p, i) => {
+  projects.slice(0, PROJECTS_IN_PDF).forEach((p, i) => {
     room(40)
     if (i > 0) doc.moveDown(0.45)
     doc

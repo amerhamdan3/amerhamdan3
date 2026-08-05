@@ -4,17 +4,19 @@ amer.m.hamdan@gmail.com | +90 553 327 11 00 | Istanbul, Türkiye | https://amerh
 
 SUMMARY
 =======
-Senior full-stack engineer and team lead with ten years building and rebuilding production web platforms across news, recruitment, healthcare research, and SaaS. Leads small teams through legacy migrations — PHP to Laravel, WordPress to Next.js — and ships the result with measurable gains in performance, engagement, and delivery rate. Comfortable owning the whole path: data model, API, interface, cloud deployment, and the SEO and Core Web Vitals work that decides whether anyone finds the product at all.
+Senior full-stack engineer and team lead with ten years building production web platforms across intelligence, news, recruitment, and commerce. Currently a lead contributor on a multi-product intelligence platform written in Go and TypeScript — a GraphQL/REST/WebSocket API over PostgreSQL, an OpenAI-compatible AI gateway with RAG and per-token billing, and a bilingual Next.js dashboard, all deployed to GKE and Cloud Run. Earlier work was mostly legacy migration: PHP to Laravel, WordPress to Next.js, with measurable gains in performance and engagement each time. Comfortable owning the whole path from schema to interface to infrastructure.
 
 EXPERIENCE
 ==========
 
 Senior Full-Stack Developer / Team Lead
 ID8 Media | Istanbul, Türkiye | 2023 — Present
+- Lead contributor on Sentra, a capability-intelligence platform: a Go binary serving GraphQL, REST, and WebSocket APIs over PostgreSQL, with a bilingual EN/AR Next.js dashboard.
+- Built Cortex, an OpenAI-compatible AI gateway brokering five model providers behind one token, with per-token usage metering, billing, and RAG on pgvector.
 - Raised project success rate 25% by leading development teams through 5 complex, concurrent client builds.
 - Improved software efficiency 15% for news agencies by engineering tailored publishing and content-delivery solutions.
 - Built large-scale global hiring platforms handling multi-region job data and employer workflows.
-- Own the delivery pipeline for multi-client sites: architecture, code review, deployment, and post-launch performance.
+- Own the delivery pipeline across clients: architecture, code review, Terraform-managed GKE and Cloud Run deploys, and post-launch performance.
 
 Web Lead & Site Administrator
 Multifaith Alliance | New York, United States (remote) | 2021 — Present
@@ -69,6 +71,30 @@ Questionnaire Connect | United States (remote) | 2018 — 2019
 SELECTED PROJECTS
 =================
 
+Sentra (ID8 Media, 2025 — Present) — Lead contributor · 1,000+ commits to the core
+Capability-intelligence platform that collects, enriches, and surfaces structured intelligence — alerts, narratives, events, entity networks, briefings — over GraphQL, REST, and WebSocket APIs backed by PostgreSQL.
+Stack: Go, TypeScript, Next.js, PostgreSQL, GraphQL, NATS, WebSockets, GKE
+
+Cortex — AI gateway (ID8 Media, 2026 — Present) — Five model providers behind one API
+Stream-first AI gateway sitting between model providers and the applications that consume them. Callers speak plain OpenAI API with a Cortex-issued token; Cortex routes to the right upstream and meters that token for billing, so provider keys never leave the gateway.
+Stack: Go, LLM routing, RAG, pgvector, OpenAI API, Metering & billing
+
+Social listening dashboards (ID8 Media, 2025 — 2026) — Hourly ingestion across three platforms
+Media-intelligence dashboards that ingest X, Instagram, and Facebook and surface sentiment, trending entities, topics, and risk assessment for communications teams.
+Stack: Next.js, TypeScript, Firebase, Sentiment analysis, Cloud Scheduler
+
+Medhat Pasha (Independent, 2026 — Present) — Multi-tenant commerce SaaS, built solo
+Multi-tenant e-commerce platform for the Syrian market — a single engine powering unlimited Arabic storefronts, built for merchants with no technical staff and tuned for slow connections.
+Stack: TypeScript, Next.js, Express, Multi-tenant, Monorepo, RTL
+
+YOHO Works (ID8 Media, 2025) — Front end and API, ~200 commits
+Global hiring platform covering multi-region job data, employer workflows, and candidate matching, delivered as a Next.js front end against a TypeScript API.
+Stack: Next.js, TypeScript, Node.js, REST APIs
+
+Reson8 (ID8 Media, 2023 — Present) — Six repositories, front to back
+Media platform spanning a client panel, admin tooling, an elections API, and serverless functions, later re-architected onto Go with its own database and message bus.
+Stack: TypeScript, Go, Next.js, Firebase, PHP
+
 Orient News Platform (Orient News, 2021 — 2023) — +30% engagement · +30% platform performance
 Full digital transformation of a regional news agency: legacy native PHP rebuilt on Laravel, then a Next.js front end on top for speed and search.
 Stack: Laravel, PHP, Next.js, React, SEO
@@ -77,22 +103,15 @@ Multifaith Alliance (Multifaith Alliance, 2021 — Present) — +70% site perfor
 Complete rebuild of a US non-profit's public platform, moving from WordPress to a custom Next.js and Tailwind stack with a reusable component system.
 Stack: Next.js, Tailwind CSS, TypeScript, Migration, SEO
 
-Amenu (Independent, 2020 — Present) — 1,000+ active users
-Menu-management SaaS for restaurants. Built solo end to end and iterated across three major versions based on how real venues actually used it.
-Stack: SaaS, Node.js, Product, Multi-tenant
-
-Global Hiring Platforms (ID8 Media, 2023 — Present) — +25% project success rate across 5 builds
-Large-scale recruitment platforms handling multi-region job data, employer workflows, and candidate matching, delivered alongside multi-client site operations.
-Stack: Next.js, TypeScript, Node.js, Google Cloud Run, Docker
-
 SKILLS
 ======
-Backend: Node.js, Express.js, Laravel (PHP), Strapi, RESTful API design, Authentication, Role & permission systems, Caching
-Frontend: TypeScript, JavaScript, React, Next.js, Tailwind CSS, HTML5, CSS3, Responsive design, UI/UX, shadcn/ui, Material UI, REST API integration
-Data: MySQL, PostgreSQL, MongoDB, Prisma ORM, Schema design
-Cloud & DevOps: Google Cloud Run, Google Cloud Build, Docker, Linux server management, Nginx, CI/CD pipelines, Git, GitHub
-AI Integration: LLM API integration, AI-assisted product features, Workflow automation, AI-assisted development tooling
-Practice: Technical & on-page SEO, Core Web Vitals, Team leadership, Agile / Scrum, Accessible layouts, Jira, Trello, Slack
+Languages: TypeScript, JavaScript, Go, PHP, Python, SQL
+Backend: Node.js, Express.js, Go (Cobra), Laravel (PHP), Strapi, REST API design, GraphQL, WebSockets, NATS, Authentication, Role & permission systems, Caching
+Frontend: React, Next.js (App Router), TypeScript, Tailwind CSS, shadcn/ui, Material UI, Responsive design, Bilingual EN/AR & RTL, Accessible layouts, UI/UX
+AI engineering: LLM gateway architecture, OpenAI-compatible APIs, Multi-provider routing (OpenAI, Anthropic, Gemini, Grok, Ollama), RAG (pgvector, pg_search), Token metering & billing, Agent workflows, Sentiment & entity extraction, Machine translation
+Data: PostgreSQL, MySQL, MongoDB, Firestore, Prisma ORM, pgvector, Schema design, Migrations
+Cloud & DevOps: Google Cloud Run, Cloud Build, Cloud Scheduler, GKE / Kubernetes, Terraform, Docker, Nginx, Linux server management, CI/CD pipelines, Git & GitHub
+Practice: Technical & on-page SEO, Core Web Vitals, Team leadership, Monorepos, Multi-tenant architecture, Agile / Scrum, Jira, Trello, Slack
 
 LANGUAGES
 =========
