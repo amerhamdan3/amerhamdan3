@@ -74,11 +74,17 @@ export const { basics, metrics, work, projects, skills, languages } = resume
 /** Where the downloadable CV lives. Regenerate with `npm run cv`. */
 export const CV_FILE = '/Amer-Hamdan-CV.pdf'
 
-/** Machine-readable versions of the same record, for parsers and agents. */
+/**
+ * Machine-readable versions of the same record, for parsers and agents.
+ * The text file is not called cv.txt: the static export writes an RSC payload
+ * to out/cv.txt for the /cv route and would overwrite it.
+ */
+export const CV_TXT_FILE = '/Amer-Hamdan-CV.txt'
+
 export const CV_FORMATS = [
   { label: 'PDF', href: CV_FILE, note: 'For humans and applicant tracking systems' },
   { label: 'JSON', href: '/cv.json', note: 'JSON Resume schema' },
-  { label: 'Plain text', href: '/cv.txt', note: 'Unstyled, for any parser' },
+  { label: 'Plain text', href: CV_TXT_FILE, note: 'Unstyled, for any parser' },
 ] as const
 
 /** Career span, used by the timeline rail. */

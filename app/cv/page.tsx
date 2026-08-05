@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { CV_FILE, basics, formatPeriod, languages, projects, skills, work } from '@/lib/resume'
+import { CV_FILE, CV_TXT_FILE, basics, formatPeriod, languages, projects, skills, work } from '@/lib/resume'
 
 export const metadata: Metadata = {
   title: 'Curriculum vitae',
@@ -135,8 +135,8 @@ export default function CVPage() {
             cv.json
           </a>{' '}
           ·{' '}
-          <a href="/cv.txt" className="underline underline-offset-4 hover:text-ink">
-            cv.txt
+          <a href={CV_TXT_FILE} className="underline underline-offset-4 hover:text-ink">
+            {CV_TXT_FILE.slice(1)}
           </a>{' '}
           ·{' '}
           <a href="/llms.txt" className="underline underline-offset-4 hover:text-ink">

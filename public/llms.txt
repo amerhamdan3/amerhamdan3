@@ -21,7 +21,7 @@ Senior full-stack engineer and team lead with ten years building and rebuilding 
 ## Full CV
 - [PDF](https://amerhamdan.com/Amer-Hamdan-CV.pdf): formatted CV for humans and applicant tracking systems
 - [JSON](https://amerhamdan.com/cv.json): JSON Resume schema v1.0.0, the structured source of record
-- [Plain text](https://amerhamdan.com/cv.txt): unstyled text of the whole CV
+- [Plain text](https://amerhamdan.com/Amer-Hamdan-CV.txt): unstyled text of the whole CV
 - [HTML](https://amerhamdan.com/cv): the same CV as a web page
 
 ## Core skills

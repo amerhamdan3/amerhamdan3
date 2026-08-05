@@ -2,11 +2,16 @@
  * Builds every downloadable form of the CV from data/resume.json:
  *
  *   public/Amer-Hamdan-CV.pdf   single column, real text layer, ATS-safe
+ *   public/Amer-Hamdan-CV.txt   unstyled plain text
  *   public/cv.json              JSON Resume schema v1.0.0
- *   public/cv.txt               unstyled plain text
  *   public/llms.txt             short brief for AI agents reading the site
  *
  * Run with `npm run cv`. Edit data/resume.json, never these outputs.
+ *
+ * Note on naming: `next build` with output:'export' writes an RSC payload to
+ * out/<route>.txt for every route, which silently overwrites a same-named file
+ * from public/. That is why the plain-text CV is not called cv.txt — the /cv
+ * route would clobber it. assertNoRouteCollision() below keeps that honest.
  */
 
 import fs from 'node:fs'
@@ -27,6 +32,9 @@ const INK = '#12191F'
 const SLATE = '#5B6770'
 const RULE = '#D8D3CA'
 const SIGNAL = '#C8442A'
+
+const PDF_FILE = 'Amer-Hamdan-CV.pdf'
+const TXT_FILE = 'Amer-Hamdan-CV.txt'
 
 const PAGE = { size: 'A4', margin: 46 }
 const WIDTH = 595.28 - PAGE.margin * 2
@@ -57,7 +65,7 @@ function buildPdf() {
     },
   })
 
-  const out = fs.createWriteStream(path.join(publicDir, 'Amer-Hamdan-CV.pdf'))
+  const out = fs.createWriteStream(path.join(publicDir, PDF_FILE))
   doc.pipe(out)
 
   const left = PAGE.margin
@@ -377,7 +385,29 @@ function buildTxt() {
   section('Languages')
   languages.forEach((l) => L.push(`${l.language}: ${l.fluency}`))
 
-  fs.writeFileSync(path.join(publicDir, 'cv.txt'), L.join('\n') + '\n')
+  fs.writeFileSync(path.join(publicDir, TXT_FILE), L.join('\n') + '\n')
+}
+
+/**
+ * A file in public/ named <route>.txt is destroyed by the static export without
+ * any warning. Fail the build instead of shipping React internals in place of
+ * the CV.
+ */
+function assertNoRouteCollision() {
+  const appDir = path.join(root, 'app')
+  const routes = fs
+    .readdirSync(appDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && !entry.name.startsWith('_'))
+    .map((entry) => entry.name)
+
+  for (const file of ['index', ...routes].map((route) => `${route}.txt`)) {
+    if (fs.existsSync(path.join(publicDir, file))) {
+      throw new Error(
+        `public/${file} collides with the RSC payload the static export writes for that route. ` +
+          `Rename it — the export would overwrite it and nobody would notice.`
+      )
+    }
+  }
 }
 
 /* ── llms.txt ───────────────────────────────────────────────────────────── */
@@ -400,9 +430,9 @@ ${basics.profiles.map((p) => `- ${p.network}: ${p.url}`).join('\n')}
 ${current.map((w) => `- ${w.position}, ${w.name} (${period(w)}) — ${w.summary}`).join('\n')}
 
 ## Full CV
-- [PDF](${basics.url}/Amer-Hamdan-CV.pdf): formatted CV for humans and applicant tracking systems
+- [PDF](${basics.url}/${PDF_FILE}): formatted CV for humans and applicant tracking systems
 - [JSON](${basics.url}/cv.json): JSON Resume schema v1.0.0, the structured source of record
-- [Plain text](${basics.url}/cv.txt): unstyled text of the whole CV
+- [Plain text](${basics.url}/${TXT_FILE}): unstyled text of the whole CV
 - [HTML](${basics.url}/cv): the same CV as a web page
 
 ## Core skills
@@ -417,6 +447,7 @@ ${languages.map((l) => `- ${l.language}: ${l.fluency}`).join('\n')}
 /* ── run ────────────────────────────────────────────────────────────────── */
 
 fs.mkdirSync(publicDir, { recursive: true })
+assertNoRouteCollision()
 buildJson()
 buildTxt()
 buildLlmsTxt()
@@ -424,6 +455,6 @@ await buildPdf()
 
 const size = (f) => (fs.statSync(path.join(publicDir, f)).size / 1024).toFixed(1) + ' KB'
 console.log('CV built from data/resume.json:')
-for (const f of ['Amer-Hamdan-CV.pdf', 'cv.json', 'cv.txt', 'llms.txt']) {
+for (const f of [PDF_FILE, TXT_FILE, 'cv.json', 'llms.txt']) {
   console.log(`  public/${f.padEnd(22)} ${size(f)}`)
 }

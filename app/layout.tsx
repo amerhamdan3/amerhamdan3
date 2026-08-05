@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Familjen_Grotesk, Public_Sans, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-import { basics, skills, work } from '@/lib/resume'
+import { CV_TXT_FILE, basics, skills, work } from '@/lib/resume'
 
 const display = Familjen_Grotesk({
   subsets: ['latin'],
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     canonical: '/',
     types: {
       'application/json': [{ url: '/cv.json', title: 'CV as JSON Resume' }],
-      'text/plain': [{ url: '/cv.txt', title: 'CV as plain text' }],
+      'text/plain': [{ url: CV_TXT_FILE, title: 'CV as plain text' }],
     },
   },
   openGraph: {

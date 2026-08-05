@@ -58,7 +58,7 @@ formats together, so they can never drift apart.
 ```bash
 npm install
 npm run dev      # local development
-npm run cv       # regenerate the PDF, cv.json, cv.txt, and llms.txt
+npm run cv       # regenerate the PDF, the plain text, cv.json, and llms.txt
 npm run images   # regenerate the portrait and social card from assets/profile.png
 npm run build    # runs `npm run cv`, then builds the static site into out/
 ```
@@ -85,7 +85,8 @@ them, so the same record is published in four forms:
   ATS then fails to find the section.
 - **[/cv.json](https://amerhamdan.com/cv.json)** — [JSON Resume](https://jsonresume.org) schema
   v1.0.0, for anything that would rather parse structured data than a document.
-- **[/cv.txt](https://amerhamdan.com/cv.txt)** — unstyled plain text.
+- **[/Amer-Hamdan-CV.txt](https://amerhamdan.com/Amer-Hamdan-CV.txt)** — unstyled plain text. Not
+  named cv.txt: the static export writes an RSC payload to that path for the /cv route.
 - **[/cv](https://amerhamdan.com/cv)** — the CV as a semantic HTML page.
 
 Plus `schema.org` `Person` and `ProfilePage` JSON-LD on every page, an
