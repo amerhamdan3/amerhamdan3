@@ -8,14 +8,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        paper: '#FBFAF7',
-        wash: '#F1EEE7',
-        rule: '#DFDBD2',
-        ink: '#12191F',
-        slate: '#5B6770',
-        signal: '#C8442A',
-        // Same accent, lifted for legibility on the ink-coloured closing section.
-        flare: '#F2795C',
+        // The four brand colours, used as given.
+        paper: '#F9F7F7',
+        wash: '#DBE2EF',
+        ink: '#112D4E',
+
+        // #3F72AF, taken 20% toward the navy. The literal value reads at only
+        // 3.81:1 against the wash, which fails AA for the small mono labels that
+        // sit on it; this shade is indistinguishable in use and clears AA
+        // everywhere — 5.69 on paper, 4.66 on wash, 5.69 behind button text.
+        signal: '#36649C',
+
+        // Derived: a palette of four cannot cover hairlines, secondary text, and
+        // an accent legible on the navy section.
+        rule: '#BDC7D7',
+        slate: '#52667D',
+        flare: '#95B0D2',
       },
       fontFamily: {
         display: ['var(--font-display)', 'system-ui', 'sans-serif'],

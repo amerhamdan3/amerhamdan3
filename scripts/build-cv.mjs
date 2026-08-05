@@ -28,10 +28,10 @@ const featured = work.filter((w) => w.featured)
 const earlier = work.filter((w) => !w.featured)
 
 /* ── design tokens, matched to the site ─────────────────────────────────── */
-const INK = '#12191F'
-const SLATE = '#5B6770'
-const RULE = '#D8D3CA'
-const SIGNAL = '#C8442A'
+const INK = '#112D4E'
+const SLATE = '#52667D'
+const RULE = '#BDC7D7'
+const SIGNAL = '#36649C'
 
 const PDF_FILE = 'Amer-Hamdan-CV.pdf'
 const TXT_FILE = 'Amer-Hamdan-CV.txt'

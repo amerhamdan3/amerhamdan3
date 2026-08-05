@@ -16,10 +16,10 @@ const source = path.join(root, 'assets', 'profile.png')
 const resume = JSON.parse(fs.readFileSync(path.join(root, 'data', 'resume.json'), 'utf8'))
 const { basics } = resume
 
-const PAPER = '#FBFAF7'
-const INK = '#12191F'
-const SIGNAL = '#C8442A'
-const SLATE = '#5B6770'
+const PAPER = '#F9F7F7'
+const INK = '#112D4E'
+const SIGNAL = '#36649C'
+const SLATE = '#52667D'
 
 await sharp(source).resize({ width: 760 }).webp({ quality: 82 }).toFile(path.join(publicDir, 'profile.webp'))
 await sharp(source).resize({ width: 760 }).jpeg({ quality: 84, mozjpeg: true }).toFile(path.join(publicDir, 'profile.jpg'))
