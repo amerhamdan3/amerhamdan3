@@ -2,7 +2,7 @@
 
 > Senior Full-Stack Engineer · Tech Lead · AI-Product Development. Based in Istanbul, Türkiye. Open to senior full-stack, tech lead, and AI-product roles — remote or Istanbul.
 
-Senior full-stack engineer and team lead with ten years building production web platforms across intelligence, news, recruitment, and commerce. Currently a lead contributor on a multi-product intelligence platform written in Go and TypeScript — a GraphQL/REST/WebSocket API over PostgreSQL, an OpenAI-compatible AI gateway with RAG and per-token billing, and a bilingual Next.js dashboard, all deployed to GKE and Cloud Run. Earlier work was mostly legacy migration: PHP to Laravel, WordPress to Next.js, with measurable gains in performance and engagement each time. Comfortable owning the whole path from schema to interface to infrastructure.
+Senior full-stack engineer and team lead with ten years building production web platforms across intelligence, news, recruitment, and commerce. Currently lead engineer on a multi-product platform written in Go and TypeScript — GraphQL, REST, and WebSocket APIs over PostgreSQL, an OpenAI-compatible LLM gateway with retrieval-augmented generation and per-token billing, and bilingual Arabic/English dashboards, all deployed to GKE and Cloud Run. Designs and ships AI agent systems, and works agent-first day to day with Claude Code, Cursor, Codex, and Gemini CLI. Earlier work was mostly legacy migration: PHP to Laravel, WordPress to Next.js, with measurable gains in performance and engagement each time.
 
 ## Contact
 - Email: amer.m.hamdan@gmail.com
@@ -13,7 +13,7 @@ Senior full-stack engineer and team lead with ten years building production web 
 - WhatsApp: https://wa.me/905533271100
 
 ## Currently
-- Senior Full-Stack Developer / Team Lead, ID8 Media (2023 — Present) — Lead engineer across the agency portfolio and its intelligence platform — Go and TypeScript services, AI infrastructure, client dashboards, and large-scale hiring products.
+- Senior Full-Stack Developer / Team Lead, ID8 Media (2023 — Present) — Lead engineer across the agency portfolio — Go and TypeScript platform services, LLM infrastructure, AI agents, client dashboards, and large-scale hiring products.
 - Web Lead & Site Administrator, Multifaith Alliance (2021 — Present) — Rebuilt and now maintain the public platform for a US non-profit working across the MENA region.
 - Founder & CEO, Amenu (SaaS) (2020 — Present) — Menu-management SaaS for restaurants, designed, built, and operated solo.
 - SEO & Technical Consultant, Freelance (2020 — Present) — Independent technical SEO and site-health consulting.
@@ -25,12 +25,13 @@ Senior full-stack engineer and team lead with ten years building production web 
 - [HTML](https://amerhamdan.com/cv): the same CV as a web page
 
 ## Core skills
-- Languages: TypeScript, JavaScript, Go, PHP, Python, SQL
+- Languages: TypeScript, JavaScript, Go, PHP, Python, SQL, Java
+- AI engineering: LLM gateway architecture, OpenAI-compatible APIs, Multi-provider routing (OpenAI, Anthropic, Gemini, Grok, Ollama), Agent design & orchestration, Multi-agent workflows, Model Context Protocol (MCP), RAG (pgvector, pg_search), Embeddings & vector search, Structured outputs & tool calling, Streaming responses (SSE), Prompt engineering & evaluation, Token metering & cost control, Sentiment & entity extraction, Machine translation
+- AI-assisted delivery: Claude Code, Cursor, OpenAI Codex, Gemini CLI, MCP servers, Agent-assisted refactoring & review, Spec-driven development, Repo conventions for coding agents
 - Backend: Node.js, Express.js, Go (Cobra), Laravel (PHP), Strapi, REST API design, GraphQL, WebSockets, NATS, Authentication, Role & permission systems, Caching
 - Frontend: React, Next.js (App Router), TypeScript, Tailwind CSS, shadcn/ui, Material UI, Responsive design, Bilingual EN/AR & RTL, Accessible layouts, UI/UX
-- AI engineering: LLM gateway architecture, OpenAI-compatible APIs, Multi-provider routing (OpenAI, Anthropic, Gemini, Grok, Ollama), RAG (pgvector, pg_search), Token metering & billing, Agent workflows, Sentiment & entity extraction, Machine translation
 - Data: PostgreSQL, MySQL, MongoDB, Firestore, Prisma ORM, pgvector, Schema design, Migrations
-- Cloud & DevOps: Google Cloud Run, Cloud Build, Cloud Scheduler, GKE / Kubernetes, Terraform, Docker, Nginx, Linux server management, CI/CD pipelines, Git & GitHub
+- Cloud & DevOps: Google Cloud Run, Cloud Build, Cloud Scheduler, GKE / Kubernetes, Terraform, Docker, Nginx, PM2, Linux server management, CI/CD pipelines, Git & GitHub
 - Practice: Technical & on-page SEO, Core Web Vitals, Team leadership, Monorepos, Multi-tenant architecture, Agile / Scrum, Jira, Trello, Slack
 
 ## Languages

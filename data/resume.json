@@ -18,8 +18,8 @@
       "countryCode": "TR"
     },
     "availability": "Open to senior full-stack, tech lead, and AI-product roles — remote or Istanbul.",
-    "thesis": "Ten years of production web systems, and lately a lot of platform work: a capability-intelligence product built on Go and Postgres, an OpenAI-compatible AI gateway, social-listening dashboards, a multi-tenant commerce SaaS. Before that, mostly migrations — taking something slow and legacy and rebuilding it without ever turning it off.",
-    "summary": "Senior full-stack engineer and team lead with ten years building production web platforms across intelligence, news, recruitment, and commerce. Currently a lead contributor on a multi-product intelligence platform written in Go and TypeScript — a GraphQL/REST/WebSocket API over PostgreSQL, an OpenAI-compatible AI gateway with RAG and per-token billing, and a bilingual Next.js dashboard, all deployed to GKE and Cloud Run. Earlier work was mostly legacy migration: PHP to Laravel, WordPress to Next.js, with measurable gains in performance and engagement each time. Comfortable owning the whole path from schema to interface to infrastructure.",
+    "thesis": "Ten years of production web systems, and lately a lot of platform work: Go services behind a large intelligence platform, an OpenAI-compatible LLM gateway, social-listening dashboards, autonomous content agents, a multi-tenant commerce SaaS. Before that, mostly migrations — taking something slow and legacy and rebuilding it without ever turning it off.",
+    "summary": "Senior full-stack engineer and team lead with ten years building production web platforms across intelligence, news, recruitment, and commerce. Currently lead engineer on a multi-product platform written in Go and TypeScript — GraphQL, REST, and WebSocket APIs over PostgreSQL, an OpenAI-compatible LLM gateway with retrieval-augmented generation and per-token billing, and bilingual Arabic/English dashboards, all deployed to GKE and Cloud Run. Designs and ships AI agent systems, and works agent-first day to day with Claude Code, Cursor, Codex, and Gemini CLI. Earlier work was mostly legacy migration: PHP to Laravel, WordPress to Next.js, with measurable gains in performance and engagement each time.",
     "profiles": [
       {
         "network": "GitHub",
@@ -56,8 +56,8 @@
     },
     {
       "figure": "5",
-      "label": "LLM providers behind one API",
-      "note": "Cortex AI gateway"
+      "label": "LLM providers behind one gateway",
+      "note": "Multi-provider routing layer"
     }
   ],
   "work": [
@@ -71,10 +71,10 @@
       "startYear": 2023,
       "endYear": 2026,
       "featured": true,
-      "summary": "Lead engineer across the agency portfolio and its intelligence platform — Go and TypeScript services, AI infrastructure, client dashboards, and large-scale hiring products.",
+      "summary": "Lead engineer across the agency portfolio — Go and TypeScript platform services, LLM infrastructure, AI agents, client dashboards, and large-scale hiring products.",
       "highlights": [
-        "Lead contributor on Sentra, a capability-intelligence platform: a Go binary serving GraphQL, REST, and WebSocket APIs over PostgreSQL, with a bilingual EN/AR Next.js dashboard.",
-        "Built Cortex, an OpenAI-compatible AI gateway brokering five model providers behind one token, with per-token usage metering, billing, and RAG on pgvector.",
+        "Lead engineer on a large intelligence platform: Go services behind GraphQL, REST, and WebSocket APIs over PostgreSQL, with a bilingual Arabic/English Next.js dashboard.",
+        "Built an OpenAI-compatible LLM gateway routing five model providers behind a single token, with per-token usage metering, billing, and retrieval-augmented generation on pgvector.",
         "Raised project success rate 25% by leading development teams through 5 complex, concurrent client builds.",
         "Improved software efficiency 15% for news agencies by engineering tailored publishing and content-delivery solutions.",
         "Built large-scale global hiring platforms handling multi-region job data and employer workflows.",
@@ -86,8 +86,8 @@
         "Next.js",
         "PostgreSQL",
         "LLM infrastructure",
-        "Google Cloud",
-        "Team leadership"
+        "AI agents",
+        "Google Cloud"
       ]
     },
     {
@@ -279,70 +279,25 @@
   ],
   "projects": [
     {
-      "id": "sentra",
-      "name": "Sentra",
-      "org": "ID8 Media",
-      "period": "2025 — Present",
-      "description": "Capability-intelligence platform that collects, enriches, and surfaces structured intelligence — alerts, narratives, events, entity networks, briefings — over GraphQL, REST, and WebSocket APIs backed by PostgreSQL.",
-      "outcome": "Lead contributor · 1,000+ commits to the core",
-      "highlights": [
-        "One Go binary hosting the bridge API, the plugin host, and a Postgres LISTEN/NOTIFY WebSocket hub",
-        "Bilingual EN/AR Next.js dashboard with full RTL support",
-        "Per-product databases with cross-product data flowing only over NATS seams",
-        "Terraform-managed GKE and Cloud Run across dev, stage, and live"
-      ],
-      "keywords": [
-        "Go",
-        "TypeScript",
-        "Next.js",
-        "PostgreSQL",
-        "GraphQL",
-        "NATS",
-        "WebSockets",
-        "GKE"
-      ]
-    },
-    {
-      "id": "cortex",
-      "name": "Cortex — AI gateway",
-      "org": "ID8 Media",
+      "id": "maestro",
+      "name": "Maestro",
+      "org": "Independent",
       "period": "2026 — Present",
-      "description": "Stream-first AI gateway sitting between model providers and the applications that consume them. Callers speak plain OpenAI API with a Cortex-issued token; Cortex routes to the right upstream and meters that token for billing, so provider keys never leave the gateway.",
-      "outcome": "Five model providers behind one API",
+      "description": "An autonomous AI social-media agency for the Arabic market. Agents research, plan, write, and schedule a brand's output end to end, with a human approving rather than authoring.",
+      "outcome": "Autonomous agent pipeline, Arabic-first",
       "highlights": [
-        "OpenAI-compatible broker across Gemini, OpenAI, Grok, Anthropic, and Ollama",
-        "Per-token usage metering and per-consumer billing",
-        "Built-in RAG on pgvector and pg_search",
-        "Machine translation and agent operations tooling"
+        "Agent pipeline covering research, content planning, generation, and scheduling",
+        "Arabic-only product surface — RTL, correct script shaping, dialect-aware copy",
+        "Provider abstraction with deterministic mock models, so the pipeline is testable without spend",
+        "Documented as a code-accurate engineering guide that AI agents navigate directly"
       ],
       "keywords": [
-        "Go",
-        "LLM routing",
-        "RAG",
-        "pgvector",
-        "OpenAI API",
-        "Metering & billing"
-      ]
-    },
-    {
-      "id": "social-listening",
-      "name": "Social listening dashboards",
-      "org": "ID8 Media",
-      "period": "2025 — 2026",
-      "description": "Media-intelligence dashboards that ingest X, Instagram, and Facebook and surface sentiment, trending entities, topics, and risk assessment for communications teams.",
-      "outcome": "Hourly ingestion across three platforms",
-      "highlights": [
-        "Automated hourly collection into Firestore, triggered by Cloud Scheduler",
-        "Sentiment detection and entity tracking over mixed social and news sources",
-        "Trend analysis surfacing emerging hashtags and keywords",
-        "Next.js 15 and shadcn/ui dashboards built for non-technical analysts"
-      ],
-      "keywords": [
-        "Next.js",
         "TypeScript",
-        "Firebase",
-        "Sentiment analysis",
-        "Cloud Scheduler"
+        "AI agents",
+        "LLM orchestration",
+        "PostgreSQL",
+        "Next.js",
+        "RTL"
       ]
     },
     {
@@ -365,6 +320,47 @@
         "Multi-tenant",
         "Monorepo",
         "RTL"
+      ]
+    },
+    {
+      "id": "social-listening",
+      "name": "Social listening dashboards",
+      "org": "ID8 Media",
+      "period": "2025 — 2026",
+      "description": "Media-monitoring dashboards that ingest X, Instagram, and Facebook and surface sentiment, trending topics, and emerging hashtags for communications teams.",
+      "outcome": "Hourly ingestion across three platforms",
+      "highlights": [
+        "Automated hourly collection into Firestore, triggered by Cloud Scheduler",
+        "Sentiment detection and trend analysis over mixed social and news sources",
+        "Grid dashboards built for analysts rather than engineers",
+        "Next.js 15, Tailwind, and shadcn/ui on Cloud Run"
+      ],
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Firebase",
+        "Sentiment analysis",
+        "Cloud Scheduler"
+      ]
+    },
+    {
+      "id": "post-engine",
+      "name": "Social API engine simulator",
+      "org": "ID8 Media",
+      "period": "2025",
+      "description": "A generator that produces realistic social posts, usernames, metrics, and timestamps from Gemini, so dashboards and pipelines could be built and demoed before any live data existed.",
+      "outcome": "Unblocked front-end work with no live feed",
+      "highlights": [
+        "Gemini-generated post text and personas with code-generated metadata",
+        "Realistic metrics, timestamps, and context annotations",
+        "Firebase-backed store shaped exactly like the production feed"
+      ],
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Gemini",
+        "Firebase",
+        "shadcn/ui"
       ]
     },
     {
@@ -405,6 +401,87 @@
         "Next.js",
         "Firebase",
         "PHP"
+      ]
+    },
+    {
+      "id": "bluhub",
+      "name": "bluHub",
+      "org": "ID8 Media",
+      "period": "2024 — 2025",
+      "description": "Multi-surface platform for an organisation: public site, a Strapi-backed CMS its staff run themselves, an admin panel, a REST API, and a separate jobs portal.",
+      "outcome": "Five surfaces on one content backend",
+      "highlights": [
+        "Next.js public site and jobs portal sharing one component system",
+        "Strapi CMS so non-technical staff publish without a developer",
+        "Admin panel and REST API behind role-based access"
+      ],
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Strapi",
+        "Node.js",
+        "CMS"
+      ]
+    },
+    {
+      "id": "louna",
+      "name": "Louna",
+      "org": "Independent",
+      "period": "2026 — Present",
+      "description": "E-commerce platform with a connected social layer — role-based page access for the team and an encrypted Meta connection driving Facebook and Instagram publishing.",
+      "outcome": "Storefront plus social publishing",
+      "highlights": [
+        "Encrypted Meta (Facebook/Instagram) connection with credentials stored outside the release directory",
+        "Role-based page access, cached per worker under PM2 cluster mode",
+        "GA4 and Tag Manager event tracking on a documented naming convention",
+        "Deploy layout that survives directory-replacing releases without losing state"
+      ],
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Meta API",
+        "PM2",
+        "GA4"
+      ]
+    },
+    {
+      "id": "marasid",
+      "name": "Marasid",
+      "org": "ID8 Media",
+      "period": "2024 — 2025",
+      "description": "Bilingual Arabic and English publication platform: a Next.js front end over Strapi, with a separate CMS instance per language so each editorial team works independently.",
+      "outcome": "Two languages, two editorial workflows",
+      "highlights": [
+        "Arabic and English sites sharing one front-end codebase",
+        "Per-language Strapi instances for independent editorial control",
+        "RTL and LTR layouts from the same component system"
+      ],
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Strapi",
+        "Bilingual",
+        "RTL"
+      ]
+    },
+    {
+      "id": "notification-forwarder",
+      "name": "Notification Forwarder",
+      "org": "Open source",
+      "period": "2026",
+      "url": "https://github.com/amerhamdan3/notification-forwarder",
+      "description": "A self-hosted Android app that forwards your own phone's SMS, call events, and app notifications to a Telegram chat you control — for reading a spare, travel, or backup device without picking it up.",
+      "outcome": "Public repository, no hardcoded secrets",
+      "highlights": [
+        "Native Android in Java, with per-user configuration",
+        "No hardcoded credentials — every user supplies their own bot and chat",
+        "Built as a personal tool and published for anyone with the same problem"
+      ],
+      "keywords": [
+        "Java",
+        "Android",
+        "Telegram API",
+        "Open source"
       ]
     },
     {
@@ -460,7 +537,40 @@
         "Go",
         "PHP",
         "Python",
-        "SQL"
+        "SQL",
+        "Java"
+      ]
+    },
+    {
+      "name": "AI engineering",
+      "keywords": [
+        "LLM gateway architecture",
+        "OpenAI-compatible APIs",
+        "Multi-provider routing (OpenAI, Anthropic, Gemini, Grok, Ollama)",
+        "Agent design & orchestration",
+        "Multi-agent workflows",
+        "Model Context Protocol (MCP)",
+        "RAG (pgvector, pg_search)",
+        "Embeddings & vector search",
+        "Structured outputs & tool calling",
+        "Streaming responses (SSE)",
+        "Prompt engineering & evaluation",
+        "Token metering & cost control",
+        "Sentiment & entity extraction",
+        "Machine translation"
+      ]
+    },
+    {
+      "name": "AI-assisted delivery",
+      "keywords": [
+        "Claude Code",
+        "Cursor",
+        "OpenAI Codex",
+        "Gemini CLI",
+        "MCP servers",
+        "Agent-assisted refactoring & review",
+        "Spec-driven development",
+        "Repo conventions for coding agents"
       ]
     },
     {
@@ -496,19 +606,6 @@
       ]
     },
     {
-      "name": "AI engineering",
-      "keywords": [
-        "LLM gateway architecture",
-        "OpenAI-compatible APIs",
-        "Multi-provider routing (OpenAI, Anthropic, Gemini, Grok, Ollama)",
-        "RAG (pgvector, pg_search)",
-        "Token metering & billing",
-        "Agent workflows",
-        "Sentiment & entity extraction",
-        "Machine translation"
-      ]
-    },
-    {
       "name": "Data",
       "keywords": [
         "PostgreSQL",
@@ -531,6 +628,7 @@
         "Terraform",
         "Docker",
         "Nginx",
+        "PM2",
         "Linux server management",
         "CI/CD pipelines",
         "Git & GitHub"

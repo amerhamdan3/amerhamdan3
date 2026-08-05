@@ -38,7 +38,7 @@ const TXT_FILE = 'Amer-Hamdan-CV.txt'
 
 // The PDF is held to two pages: a third page carrying only a few lines reads
 // worse than a full second one. The site and the text version carry everything.
-const PROJECTS_IN_PDF = 5
+const PROJECTS_IN_PDF = 4
 const EARLIER_BULLETS_IN_PDF = 1
 
 const PAGE = { size: 'A4', margin: 46 }
@@ -143,33 +143,44 @@ function buildPdf() {
 
   doc.moveDown(0.6)
 
-  // Contact line, each segment carrying its own link annotation. It has to stay
-  // on one line, so shrink the type until the whole run fits the column.
-  const contact = [
-    { text: basics.email, link: `mailto:${basics.email}` },
-    { text: basics.phone, link: `tel:${basics.phoneRaw}` },
-    { text: `${basics.location.city}, ${basics.location.country}`, link: null },
-    { text: 'amerhamdan.com', link: basics.url },
-    { text: 'github.com/amerhamdan3', link: 'https://github.com/amerhamdan3' },
-    { text: 'linkedin.com/in/amerhamdan3', link: 'https://www.linkedin.com/in/amerhamdan3/' },
-  ]
+  // Contact details on two deliberate lines — how to reach him, then where to
+  // read more. All six on one line only fits by shrinking the type below 7pt,
+  // which is too small to be worth it; two lines at a legible size is better.
   const SEP = '   ·   '
-  const fits = (size) => {
-    doc.font('Helvetica').fontSize(size)
-    const total = contact.reduce((sum, s) => sum + doc.widthOfString(s.text), 0)
-    return total + doc.widthOfString(SEP) * (contact.length - 1) <= WIDTH - 2
-  }
-  const contactSize = [8.6, 8.3, 8, 7.7, 7.4].find(fits) ?? 7.2
+  const contactLines = [
+    [
+      { text: basics.email, link: `mailto:${basics.email}` },
+      { text: basics.phone, link: `tel:${basics.phoneRaw}` },
+      { text: `${basics.location.city}, ${basics.location.country}`, link: null },
+    ],
+    [
+      { text: 'amerhamdan.com', link: basics.url },
+      { text: 'github.com/amerhamdan3', link: 'https://github.com/amerhamdan3' },
+      { text: 'linkedin.com/in/amerhamdan3', link: 'https://www.linkedin.com/in/amerhamdan3/' },
+    ],
+  ]
 
-  doc.font('Helvetica').fontSize(contactSize).fillColor(SLATE)
-  contact.forEach((seg, i) => {
-    const last = i === contact.length - 1
-    doc.text(seg.text, { continued: true, ...(seg.link ? { link: seg.link } : { link: null }) })
-    if (!last) doc.fillColor(RULE).text(SEP, { continued: true, link: null }).fillColor(SLATE)
-    else doc.text('', { link: null })
+  // A `continued` run does not reliably leave doc.y past the line it drew, so
+  // each line is placed at an explicit y and the cursor advanced by hand.
+  contactLines.forEach((line) => {
+    doc.font('Helvetica').fontSize(8.6).fillColor(SLATE)
+    const y = doc.y
+    line.forEach((seg, i) => {
+      const opts = { continued: true, ...(seg.link ? { link: seg.link } : { link: null }) }
+      // Only the first segment positions itself; the rest ride the continued
+      // flow, or each one resets x and they stack on top of each other.
+      if (i === 0) doc.text(seg.text, left, y, { ...opts, width: WIDTH })
+      else doc.text(seg.text, opts)
+      if (i < line.length - 1) {
+        doc.fillColor(RULE).text(SEP, { continued: true, link: null }).fillColor(SLATE)
+      } else {
+        doc.text('', { link: null })
+      }
+    })
+    doc.y = y + doc.currentLineHeight() + 1.5
   })
 
-  doc.moveDown(0.45)
+  doc.moveDown(0.55)
   doc
     .font('Helvetica-Oblique')
     .fontSize(8.6)
@@ -258,8 +269,21 @@ function buildPdf() {
   })
 
   /* languages ------------------------------------------------------------- */
-  heading('Languages')
-  para(languages.map((l) => `${l.language} (${l.fluency})`).join('   ·   '), { size: 9.5 })
+  // Spoken languages ride along as a final Skills row instead of taking their
+  // own heading. That heading and its rule were the whole reason the CV spilled
+  // onto a third page.
+  room(26)
+  doc.moveDown(0.32)
+  doc
+    .font('Helvetica-Bold')
+    .fontSize(9.5)
+    .fillColor(INK)
+    .text('Spoken languages:  ', left, doc.y, { width: WIDTH, continued: true, lineGap: 1.6 })
+  doc
+    .font('Helvetica')
+    .fontSize(9.5)
+    .fillColor(INK)
+    .text(languages.map((l) => `${l.language} (${l.fluency})`).join(', '), { lineGap: 1.6 })
 
   /* footers --------------------------------------------------------------- */
   const range = doc.bufferedPageRange()
