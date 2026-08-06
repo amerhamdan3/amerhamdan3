@@ -21,7 +21,10 @@ export default function Hero() {
               className="rise mt-6 font-display text-[clamp(3.5rem,12vw,9rem)] font-bold leading-[0.85] tracking-[-0.035em]"
               style={{ animationDelay: '60ms' }}
             >
-              <span className="block">Amer</span>
+              {/* The space between the two blocks is invisible but keeps the
+                  heading's text content "Amer Hamdan" rather than "AmerHamdan"
+                  for crawlers and screen readers. */}
+              <span className="block">Amer</span>{' '}
               <span className="block">Hamdan</span>
             </h1>
 
