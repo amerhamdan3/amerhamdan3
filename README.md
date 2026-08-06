@@ -69,7 +69,7 @@ npm run build    # runs `npm run cv`, then builds the static site into out/
 data/resume.json          the single source of truth
 lib/resume.ts             typed access to it
 scripts/build-cv.mjs      emits the PDF and the machine-readable formats
-scripts/build-images.mjs  emits profile.webp, profile.jpg, og.png
+scripts/build-images.mjs  emits profile.webp, profile.jpg, og.jpg, favicons
 app/                      the site (/) and the HTML CV (/cv)
 components/               page sections
 ```

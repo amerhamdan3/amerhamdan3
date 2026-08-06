@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Familjen_Grotesk, Public_Sans, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { CV_TXT_FILE, basics, skills, work } from '@/lib/resume'
@@ -24,7 +24,17 @@ const mono = JetBrains_Mono({
   display: 'swap',
 })
 
-const description = `${basics.headline}. ${basics.thesis}`
+// Google renders roughly 155 characters and WhatsApp far fewer, so the search
+// and share description is written to that budget rather than reusing the long
+// on-page thesis, which was being truncated mid-sentence.
+const description = basics.seoDescription
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#F9F7F7' },
+    { media: '(prefers-color-scheme: dark)', color: '#112D4E' },
+  ],
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(basics.url),
@@ -36,17 +46,31 @@ export const metadata: Metadata = {
   applicationName: `${basics.name} — CV`,
   authors: [{ name: basics.name, url: basics.url }],
   creator: basics.name,
+  // Search engines have ignored this tag since 2009. A short, honest list beats
+  // the 100-term dump that was here — that only made the head heavy and read as
+  // keyword stuffing to anyone inspecting the page.
   keywords: [
-    basics.label,
+    'Amer Hamdan',
     'Senior Full-Stack Engineer',
     'Tech Lead',
     'AI Engineer',
-    'Solutions Architect',
-    ...work.map((w) => w.position),
-    ...skills.flatMap((s) => s.keywords),
+    'Go',
+    'TypeScript',
+    'Next.js',
+    'Node.js',
+    'Laravel',
+    'PostgreSQL',
     'Istanbul',
     'Remote',
   ],
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '48x48' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/manifest.webmanifest',
   alternates: {
     canonical: '/',
     types: {
@@ -64,13 +88,13 @@ export const metadata: Metadata = {
     url: basics.url,
     siteName: basics.name,
     locale: 'en_US',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: `${basics.name}, ${basics.label}` }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630, type: 'image/jpeg', alt: `${basics.name}, ${basics.label}` }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${basics.name} — ${basics.label}`,
     description,
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
   robots: {
     index: true,
@@ -125,7 +149,7 @@ const jsonLd = {
       url: basics.url,
       name: `${basics.name} — ${basics.label}`,
       about: { '@id': `${basics.url}/#person` },
-      primaryImageOfPage: `${basics.url}/og.png`,
+      primaryImageOfPage: `${basics.url}/og.jpg`,
       inLanguage: 'en',
     },
   ],

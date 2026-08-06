@@ -3,8 +3,34 @@ import { CV_FILE, CV_TXT_FILE, basics, formatPeriod, languages, projects, skills
 
 export const metadata: Metadata = {
   title: 'Curriculum vitae',
-  description: `Full CV for ${basics.name}, ${basics.label}. Also available as PDF, JSON Resume, and plain text.`,
+  description: basics.cvSeoDescription,
   alternates: { canonical: '/cv' },
+  // Declaring openGraph here replaces the root block outright rather than
+  // merging into it, so the image has to be repeated — without it this page
+  // shares with no thumbnail at all.
+  openGraph: {
+    type: 'profile',
+    title: `Curriculum vitae — ${basics.name}`,
+    description: basics.cvSeoDescription,
+    url: `${basics.url}/cv`,
+    siteName: basics.name,
+    locale: 'en_US',
+    images: [
+      {
+        url: '/og.jpg',
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
+        alt: `${basics.name}, ${basics.label}`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `Curriculum vitae — ${basics.name}`,
+    description: basics.cvSeoDescription,
+    images: ['/og.jpg'],
+  },
 }
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {

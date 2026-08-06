@@ -54,6 +54,8 @@ export default function Hero() {
                 alt={`${basics.name}, ${basics.label}`}
                 width={760}
                 height={1140}
+                fetchPriority="high"
+                decoding="async"
                 className="block h-auto w-full"
               />
             </div>

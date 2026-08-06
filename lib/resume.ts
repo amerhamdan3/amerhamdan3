@@ -22,6 +22,9 @@ export type Basics = {
   availability: string
   thesis: string
   summary: string
+  /** Written to Google's ~155-character budget; the thesis is far too long. */
+  seoDescription: string
+  cvSeoDescription: string
   profiles: Profile[]
 }
 
