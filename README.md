@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="public/profile.jpg" width="150" alt="Amer Hamdan">
-
 # Amer Hamdan
 
 ### Senior Full-Stack Engineer · Tech Lead · AI-Product Development
