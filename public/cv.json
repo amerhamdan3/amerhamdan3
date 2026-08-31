@@ -192,6 +192,7 @@
         "Monorepo",
         "RTL"
       ],
+      "url": "https://mpasha.store/",
       "entity": "Independent",
       "type": "application"
     },
@@ -347,7 +348,6 @@
         "Telegram API",
         "Open source"
       ],
-      "url": "https://github.com/amerhamdan3/notification-forwarder",
       "entity": "Open source",
       "type": "application"
     },
@@ -368,6 +368,7 @@
         "React",
         "SEO"
       ],
+      "url": "https://orient-news.net/",
       "entity": "Orient News",
       "type": "application"
     },
@@ -529,6 +530,6 @@
   "meta": {
     "canonical": "https://amerhamdan.com/cv.json",
     "version": "v1.0.0",
-    "lastModified": "2026-08-06"
+    "lastModified": "2026-08-31"
   }
 }

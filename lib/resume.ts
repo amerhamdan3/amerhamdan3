@@ -52,6 +52,7 @@ export type Project = {
   org: string
   period: string
   url?: string
+  repoUrl?: string
   description: string
   outcome: string
   highlights: string[]

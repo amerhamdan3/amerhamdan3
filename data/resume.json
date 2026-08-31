@@ -307,6 +307,7 @@
       "name": "Medhat Pasha",
       "org": "Independent",
       "period": "2026 — Present",
+      "url": "https://mpasha.store/",
       "description": "Multi-tenant e-commerce platform for the Syrian market — a single engine powering unlimited Arabic storefronts, built for merchants with no technical staff and tuned for slow connections.",
       "outcome": "Multi-tenant commerce SaaS, built solo",
       "highlights": [
@@ -473,7 +474,7 @@
       "name": "Notification Forwarder",
       "org": "Open source",
       "period": "2026",
-      "url": "https://github.com/amerhamdan3/notification-forwarder",
+      "repoUrl": "https://github.com/amerhamdan3/notification-forwarder",
       "description": "A self-hosted Android app that forwards your own phone's SMS, call events, and app notifications to a Telegram chat you control — for reading a spare, travel, or backup device without picking it up.",
       "outcome": "Public repository, no hardcoded secrets",
       "highlights": [
@@ -493,6 +494,7 @@
       "name": "Orient News Platform",
       "org": "Orient News",
       "period": "2021 — 2023",
+      "url": "https://orient-news.net/",
       "description": "Full digital transformation of a regional news agency: legacy native PHP rebuilt on Laravel, then a Next.js front end on top for speed and search.",
       "outcome": "+30% engagement · +30% platform performance",
       "highlights": [
