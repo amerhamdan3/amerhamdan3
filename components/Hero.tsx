@@ -46,6 +46,14 @@ export default function Hero() {
               <a href={`mailto:${basics.email}`} className="btn btn-ghost">
                 Email me
               </a>
+              <a
+                href={`https://wa.me/${basics.phoneRaw.replace('+', '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost"
+              >
+                Talk on WhatsApp
+              </a>
             </div>
           </div>
 
